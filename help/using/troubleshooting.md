@@ -1,11 +1,11 @@
 ---
 title: Problemen oplossen [!DNL Asset Compute Service]
-description: Aangepaste toepassingen oplossen en fouten opsporen met [!DNL Asset Compute Service].
+description: Aangepaste toepassingen oplossen en fouten hierin opsporen met [!DNL Asset Compute Service].
 exl-id: 017fff91-e5e9-4a30-babf-5faa1ebefc2f
-source-git-commit: 5257e091730f3672c46dfbe45c3e697a6555e6b1
+source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 1%
+source-wordcount: '273'
+ht-degree: 0%
 
 ---
 
@@ -18,17 +18,17 @@ Enkele algemene tips voor het oplossen van problemen die u kunnen helpen problem
 * Verzeker om het even welke fouten die uit schoonmaakbeurt bij mislukking kunnen voortkomen niet hun eigen fouten produceren die het originele probleem verbergen.
 
 * Wanneer u het ontwikkelaarsgereedschap voor het eerst start met een nieuwe [!DNL Asset Compute Service] het eerste verwerkingsverzoek mislukt als het Asset compute Events Journal niet volledig is ingesteld. Wacht enige tijd op het dagboek aan opstelling alvorens een ander verzoek te verzenden.
-* Als er fouten optreden bij het verzenden van Asset compute `/register` of `/process` aanvragen, zorg ervoor dat alle noodzakelijke API&#39;s worden toegevoegd aan de [!DNL Adobe I/O] Project en werkruimte: Asset compute, [!DNL Adobe I/O] gebeurtenissen, [!DNL Adobe I/O] Events Management en [!DNL Adobe I/O] Runtime.
+* Alle vereiste API&#39;s-Asset compute, Adobe [!DNL I/O Events], Gebeurtenisbeheer en Runtime zijn opgenomen in uw Adobe [!DNL `I/O Project`] en Workspace `/register` of `/process` aanvraagfouten.
 
-## Aanmeldingsproblemen via [!DNL Adobe I/O] CLI {#login-via-aio-cli}
+## Problemen aanmelden via Adobe [!DNL aio-cli] {#login-via-aio-cli}
 
-Als u problemen hebt met het aanmelden bij de [!DNL Adobe Developer Console] [via de [!DNL Adobe I/O] CLI](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli)Voeg vervolgens handmatig de vereiste gegevens toe voor het ontwikkelen, testen en implementeren van uw aangepaste toepassing:
+Als u problemen hebt met het aanmelden bij de [!DNL Adobe Developer Console] [via de Adobe [!DNL aio-cli]](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli)Voeg vervolgens handmatig de vereiste gegevens toe voor het ontwikkelen, testen en implementeren van uw aangepaste toepassing:
 
-1. Ga naar uw Adobe Developer App Builder-project en -werkruimte op het tabblad [Adobe Developer Console](https://console.adobe.io/) en drukken **[!UICONTROL Downloaden]** in de rechterbovenhoek. Open dit bestand en sla deze JSON op een veilige plaats op uw computer op.
+1. Ga naar uw Adobe Developer App Builder-project en -werkruimte op het tabblad [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) en drukken **[!UICONTROL Downloaden]** in de rechterbovenhoek. Open dit bestand en sla deze JSON op een veilige plaats op uw computer op.
 
-1. Navigeer naar het ENV-bestand in de Adobe Developer App Builder-toepassing.
+1. Navigeer naar het ENV-bestand in uw Adobe Developer App Builder-toepassing.
 
-1. Voeg de [!DNL Adobe I/O] Runtimereferenties. Krijg de [!DNL Adobe I/O] A Runtime geloofsbrieven van gedownloade JSON. De referenties zijn onder `project.workspace.services.runtime`. Voeg de [!DNL Adobe I/O] Runtimegegevens in het dialoogvenster `AIO_runtime_XXX` variabelen:
+1. De Adobe toevoegen [!DNL I/O Runtime] referenties. De Adobe ophalen [!DNL I/O Runtime] referenties van de gedownloade JSON. De aanmeldingsgegevens zijn onder `project.workspace.services.runtime`. Voeg de [!DNL Adobe I/O] Runtime referenties in `AIO_runtime_XXX` variabelen:
 
    ```json
    AIO_runtime_auth=

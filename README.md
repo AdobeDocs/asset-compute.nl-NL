@@ -1,18 +1,16 @@
 ---
-source-git-commit: 1a300e1c83d5ab3508cb762149167029eb73ed2c
+source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
 workflow-type: tm+mt
-translation-type: tm+mt
-source-wordcount: '69'
+source-wordcount: '68'
 ht-degree: 0%
 
 ---
-# Adobe Asset compute Service Documentatie
+# Adobe Asset compute Service Documentation
 
-Dit is de opslagplaats voor documentatie van [!DNL Adobe Asset Compute Service].
+Deze opslagplaats voor documentatie is bedoeld voor [!DNL Adobe Asset Compute Service].
 
 Uw bijdragen aan de documentatie zijn welkom. Zie de volgende bronnen:
 
-* [contribute.](contributing.md) mdVoor een overzicht van hoe te om aan de documentatie bij te dragen.
-* [Guidelines.](guidelines.md) mdVoor een overzicht van wat in bijdragen wordt verwacht en hoe te om uw documentatiebijdragen samen te stellen.
-* [gedragscode.](code-of-conduct.md) mdVoor een overzicht van de normen van gedrag wij verwachten aangezien u aan dit documentatieproject bijdraagt.
-
+* [contribute.md](contributing.md) Voor een overzicht van hoe te om aan de documentatie bij te dragen.
+* [guidelines.md](guidelines.md) Voor een overzicht van wat in bijdragen en hoe te om uw documentatiebijdragen samen te stellen wordt verwacht.
+* [gedragscode.md](code-of-conduct.md) Voor een overzicht van de normen van gedrag verwacht de Adobe aangezien u aan dit documentatieproject bijdraagt.

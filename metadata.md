@@ -12,9 +12,9 @@ feature-set: Experience Manager Assets
 git-repo: https://github.com/AdobeDocs/asset-compute.nl-NL
 index: y
 recommendations: noDisplay
-source-git-commit: cb87ab6081d53610acf27419fa5103b3ae1ead03
+source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Het bestand metadata.md bevat metagegevens op repo-niveau die worden doorgegeven
 |--- |--- |
 | titel oplossing | Gebruikt in artikelkoptekst als koppeling |
 | oplossing-hub-url | Opent de pagina van de steunhub |
-| oplossingspictogram | Hiermee wordt het oplossingspictogram weergegeven naast de titel van de oplossing. Nog niet geïmplementeerd |
+| oplossingspictogram | Toont een oplossingspictogram naast de oplossingstitel. Nog niet geïmplementeerd |
 | aan de slag-url | Koppeling naar de pagina Aan de slag |
-| zelfstudies-url | Koppeling maken naar videozelfstudies: helpx-zelfstudies of KT-zelfstudies |
-| minitoc-niveaus | Hiermee bepaalt u het aantal kopniveaus dat wordt weergegeven in de rechterrails. default is 2 |
-| git-repo | Hiermee geeft u de locatie op van het hoofdrepo voor intern gebruik |
+| zelfstudies-url | Koppeling maken naar videozelfstudies - Helpx-zelfstudies of zelfstudies voor kennisoverdracht |
+| minitoc-niveaus | Hiermee bepaalt u het aantal kopniveaus dat in de rechterspoorlijn wordt weergegeven. default is 2 |
+| git-repo | Hiermee wordt de locatie van het primaire repo voor intern gebruik opgegeven |
 
 In bestand TOC.md
 

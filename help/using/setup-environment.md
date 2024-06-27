@@ -2,9 +2,9 @@
 title: De ontwikkelomgeving instellen die vereist is voor [!DNL Asset Compute Service]
 description: Ontwikkelomgeving instellen voor [!DNL Asset Compute Service] om aangepaste code te maken en te testen.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: 5257e091730f3672c46dfbe45c3e697a6555e6b1
+source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,10 @@ Om een opstelling tot stand te brengen die u toestaat te ontwikkelen voor [!DNL 
 1. Hier volgen nog enkele gereedschappen die u helpen probleemloos aan de slag te gaan met het ontwikkelen van:
 
    * [Git](https://git-scm.com/)
-   * [Docker-bureaublad](https://www.docker.com/get-started)
-   * [NodeJS](https://nodejs.org) (v14 LTS, oneven versies worden niet aanbevolen) en [NPM](https://www.npmjs.com). Gebruiker van OSX HomeBrew kan dit doen `brew install node` om beide te installeren. Anders downloadt u het bestand van het [Downloadpagina voor NodeJS](https://nodejs.org/en/)
-   * Een winde die voor NodeJS goed is, adviseren wij [Visual Studio Code (VS Code)](https://code.visualstudio.com) aangezien het gesteunde winde voor debugger is. U kunt om het even welke andere winde als coderedacteur gebruiken, maar geavanceerd gebruik (b.v. debugger) wordt nog niet gesteund
-   * De nieuwste[[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`)
+   * [Docker Desktop](https://www.docker.com/get-started)
+   * [NodeJS](https://nodejs.org) (v14 LTS, oneven versies worden niet aanbevolen) en [NPM](https://www.npmjs.com). Gebruiker van OS X HomeBrew kan dit doen `brew install node` om beide te installeren. Anders downloadt u het bestand van het tabblad [Downloadpagina voor NodeJS](https://nodejs.org/en/)
+   * Een winde die voor NodeJS goed is, adviseert de Adobe [Visual Studio Code (de Code van VS)](https://code.visualstudio.com) aangezien het gesteunde winde voor debugger is. U kunt om het even welke andere winde als coderedacteur gebruiken, maar geavanceerd gebruik (bijvoorbeeld, debugger) wordt nog niet gesteund
+   * De nieuwste Adobe installeren [[!DNL aio-cli]](https://github.com/adobe/aio-cli) (`aio`)
    <!-- - install using `npm install -g @adobe/aio-cli@7.1.0` -->
 
 1. Zorg ervoor dat u voldoet aan de [voorwaarden](/help/using/understand-extensibility.md#prerequisites-and-provisioning)
@@ -36,17 +36,17 @@ Om een opstelling tot stand te brengen die u toestaat te ontwikkelen voor [!DNL 
 
 ## Een App Builder-project instellen {#create-App-Builder-project}
 
-1. Zorgen voor de rol van systeembeheerder of ontwikkelaar in de [!DNL Experience Cloud] organisatie. Dit wordt ingesteld door een systeembeheerder in het [Admin Console](https://adminconsole.adobe.com/overview).
+1. Zorg ervoor dat er een systeembeheerder of ontwikkelaarrol in de [!DNL Experience Cloud] organisatie. Een systeembeheerder, in de [Admin Console](https://adminconsole.adobe.com/overview), stelt deze rol in.
 
-1. Aanmelden bij [Adobe Developer Console](https://console.adobe.io/). Zorg ervoor dat u deel uitmaakt van hetzelfde [!DNL Experience Cloud] organisatie als [!DNL Experience Manager] als [!DNL Cloud Service] integratie. Voor meer informatie over Adobe Developer Console raadpleegt u [Console-documentatie](https://www.adobe.io/apis/experienceplatform/console/docs.html).
+1. Aanmelden bij [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis). Zorg ervoor dat u deel uitmaakt van hetzelfde [!DNL Experience Cloud] organisatie als [!DNL Experience Manager] als [!DNL Cloud Service] integratie. Ga voor meer informatie over Adobe Developer Console naar [Console-documentatie](https://developer.adobe.com/developer-console/docs/guides/).
 
-1. [Een App Builder-project maken](https://developer.adobe.com/app-builder/docs/getting_started/first_app/). Klikken **[!UICONTROL Nieuw project maken]** > **[!UICONTROL Project uit sjabloon]**. Selecteer App Builder. Het leidt tot een nieuw Project van de Bouwer App met twee werkruimten: `Production` en `Stage`. Aanvullende werkruimten toevoegen, bijvoorbeeld `Development`, indien nodig.
+1. [Een App Builder-project maken](https://developer.adobe.com/app-builder/docs/getting_started/first_app/). Klikken **[!UICONTROL Nieuw project maken]** > **[!UICONTROL Project uit sjabloon]**. Selecteer App Builder. Er wordt een nieuw App Builder-project gemaakt met twee werkruimten: `Production` en `Stage`. Aanvullende werkruimten toevoegen, bijvoorbeeld `Development`, indien nodig.
 
-1. In het Project van de Bouwer van de App, selecteer een werkruimte en teken aan de diensten nodig voor Asset compute in. Klikken **Toevoegen aan project** > **API** en toevoegen `Asset Compute`, `IO Events`, en `IO Events Management` diensten. Wanneer de eerste API wordt toegevoegd, wordt gevraagd om een persoonlijke sleutel te maken. Sla deze gegevens op uw computer op omdat u deze sleutel nodig hebt om uw aangepaste toepassing met het ontwikkelaarsgereedschap te testen.
+1. Selecteer in het App Builder-project een werkruimte en meld u aan welke services nodig zijn voor de Asset compute. Klikken **Toevoegen aan project** > **API** en toevoegen `Asset Compute`, `IO Events`, en `IO Events Management` diensten. Wanneer de eerste API wordt toegevoegd, wordt gevraagd om een persoonlijke sleutel te maken. Sla deze gegevens op uw computer op omdat u deze sleutel nodig hebt om uw aangepaste toepassing met het ontwikkelaarsgereedschap te testen.
 
 ## Volgende stap {#next-step}
 
-Nu uw omgeving is ingesteld, kunt u [een aangepaste toepassing maken](develop-custom-application.md).
+Als uw omgeving is ingesteld, kunt u [een aangepaste toepassing maken](develop-custom-application.md).
 
 <!-- More ideas:
  

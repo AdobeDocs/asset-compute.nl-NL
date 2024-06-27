@@ -1,22 +1,21 @@
 ---
-source-git-commit: 324f414164ccbb712e7197ddc68075ea9c238cae
+source-git-commit: f15b9819d3319d22deccdf7e39c0f72728baaa39
 workflow-type: tm+mt
-translation-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
-# Gedragscode Adobe
+# Gedragscode van de Adobe
 
-## Onze belofte
+## Toezegging Adobe
 
-Om een open en welkome omgeving te bevorderen, verbinden wij als contribuanten en onderhoudsgerechtigden ons ertoe om van deelname aan ons project en onze gemeenschap een pesterijen-vrije ervaring te maken voor iedereen, ongeacht leeftijd, lichaamsgrootte, handicap, etnische afkomst, genderidentiteit en expressie, niveau van ervaring, nationaliteit, persoonlijke verschijning, ras, godsdienst of seksuele identiteit en geaardheid.
+Om een open en welkome omgeving te bevorderen, verbinden zowel contribuanten als onderhoudsgerechtigden zich ertoe om van deelname aan een project en de gemeenschap een pesterijen-vrije ervaring voor iedereen te maken. Deze ervaring is onafhankelijk van leeftijd, lichaamsgrootte, handicap, etniciteit, genderidentiteit en expressie. Ongeacht het niveau van ervaring, nationaliteit, persoonlijke verschijning, ras, godsdienst of seksuele identiteit en geaardheid.
 
-## Onze standaarden
+## Standaarden van de Adobe
 
 Voorbeelden van gedrag dat bijdraagt tot het maken van een positieve omgeving zijn:
 
-* Het gebruiken van verwelkomings en inclusieve taal
+* Een welkome en inclusieve taal gebruiken
 * Naleving van verschillende standpunten en ervaringen
 * Erg vriendelijk constructieve kritiek te aanvaarden
 * Focussen op wat het beste is voor de gemeenschap
@@ -30,22 +29,22 @@ Voorbeelden van onacceptabel gedrag van deelnemers zijn:
 * Persoonlijke gegevens van anderen publiceren, zoals een fysiek of elektronisch adres, zonder uitdrukkelijke toestemming
 * Andere gedragingen die redelijkerwijs als ongeschikt in een professionele omgeving kunnen worden beschouwd
 
-## Onze verantwoordelijkheden
+## Taken van de Adobe
 
 Projectbeheerders zijn verantwoordelijk voor het verduidelijken van de normen voor aanvaardbaar gedrag en zullen naar verwachting passende en eerlijke corrigerende maatregelen nemen in geval van onaanvaardbare gedragingen.
 
-Projectbeheerders hebben het recht en de verantwoordelijkheid om opmerkingen, verbintenissen, code, wiki-bewerkingen, problemen en andere bijdragen die niet aan deze gedragscode zijn aangepast, te verwijderen, te bewerken of af te wijzen, of om een contribuant tijdelijk of permanent te verbieden voor ander gedrag dat zij ongeschikt, bedreigend, aanstootgevend of schadelijk achten.
+Projectbeheerders hebben het recht en de verantwoordelijkheid om opmerkingen te verwijderen, te bewerken of af te wijzen. Dit overzicht omvat verplichtingen, code, wiki-bewerkingen, problemen of andere bijdragen die niet zijn afgestemd op deze gedragscode. Of u kunt een contribuant tijdelijk of permanent verbieden voor ander gedrag dat hij ongeschikt, bedreigend, aanstootgevend of schadelijk acht.
 
 ## Scope
 
-Deze gedragscode is zowel van toepassing binnen projectruimten als in openbare ruimten wanneer een individu het project of zijn gemeenschap vertegenwoordigt. Voorbeelden van het vertegenwoordigen van een project of gemeenschap zijn het gebruik van een officieel e-mailadres voor een project, het posten via een officiële sociale-mediaaccount of het optreden als een aangewezen vertegenwoordiger tijdens een online- of offline-evenement. De representatie van een project kan nader worden omschreven en verduidelijkt door projectbeheerders.
+Deze gedragscode is zowel van toepassing binnen projectruimten als in openbare ruimten wanneer een individu het project of zijn gemeenschap vertegenwoordigt. Voorbeelden om een project of een gemeenschap te vertegenwoordigen omvatten het gebruiken van een officieel project e-mailadres. Het kan ook de terbeschikkingstelling via een officieel sociaal mediaaccount omvatten. Het kan ook het optreden als een aangewezen vertegenwoordiger tijdens een online- of offlinegebeurtenis omvatten. Projectbeheerders kunnen de representatie van een project nader definiëren en verduidelijken.
 
 ## Handhaving
 
-Gevallen van misbruik, pesterijen of anderszins onacceptabel gedrag kunnen worden gemeld door contact op te nemen met het projectteam op Grp-opensourceoffice@adobe.com. Alle klachten zullen worden getoetst en onderzocht en zullen resulteren in een antwoord dat noodzakelijk en passend wordt geacht in verband met de omstandigheden. Het projectteam is verplicht de vertrouwelijkheid ten aanzien van de melder van een incident te handhaven. Nadere bijzonderheden over het specifieke handhavingsbeleid kunnen afzonderlijk worden vermeld.
+Gevallen van misbruik, pesterijen of anderszins onacceptabel gedrag kunnen worden gemeld door contact op te nemen met het projectteam op Grp-opensourceoffice@adobe.com. Alle klachten worden onderzocht en onderzocht en kunnen leiden tot een antwoord dat noodzakelijk en passend wordt geacht in verband met de omstandigheden. Het projectteam is verplicht de vertrouwelijkheid ten aanzien van de melder van een incident te handhaven. Nadere bijzonderheden over het specifieke handhavingsbeleid kunnen afzonderlijk worden vermeld.
 
 Projectbeheerders die de gedragscode te goeder trouw niet naleven of handhaven, kunnen tijdelijke of permanente gevolgen ondervinden, zoals bepaald door andere leiders van het project.
 
 ## Attributie
 
-Deze gedragscode is aangepast aan het [bijdrageverdrag](https://contributor-covenant.org), versie 1.4, beschikbaar op [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/).
+Deze gedragscode is aangepast aan de [Medebijdrageovereenkomst](https://www.contributor-covenant.org/), versie 1.4, beschikbaar op [Medebijdrageovereenkomst](https://www.contributor-covenant.org/version/1/4/code-of-conduct/).

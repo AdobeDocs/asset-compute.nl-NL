@@ -1,6 +1,6 @@
 ---
-title: Begrijp over uitbreiden [!DNL Asset Compute Service]
-description: Wanneer en hoe breidt u de [!DNL Asset Compute Service] functionaliteit voor aangepaste verwerking van elementen.
+title: Begrijp over uitbreiden  [!DNL Asset Compute Service]
+description: Wanneer en hoe te om de  [!DNL Asset Compute Service]  functionaliteit uit te breiden om de verwerking van douaneactiva te doen.
 exl-id: 3b903364-34cc-44d5-9a03-24a0102cf85d
 source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
 workflow-type: tm+mt
@@ -11,24 +11,24 @@ ht-degree: 0%
 
 # Inleiding tot uitbreidbaarheid {#introduction-to-extensibilty}
 
-Aan veel vereisten voor vertoningen, zoals het omzetten in indelingen en het vergroten of verkleinen van afbeeldingen, wordt voldaan door [Profielen verwerken in [!DNL Experience Manager] als [!DNL Cloud Service]](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview). De complexere bedrijfsvereisten kunnen een douane-gecreeerde oplossing vereisen die de behoeften van een organisatie aanpast. [!DNL Asset Compute Service] kan worden uitgebreid door aangepaste toepassingen te maken die worden aangeroepen vanuit Process Profiles in [!DNL Experience Manager]. Deze aangepaste toepassingen kunnen [ondersteunde gebruiksgevallen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
+Vele vertoningsvereisten zoals het omzetten in formaten en het resizing van beelden worden gericht door [ Profielen van de Verwerking in  [!DNL Experience Manager]  als a  [!DNL Cloud Service] ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview). De complexere bedrijfsvereisten kunnen een douane-gecreeerde oplossing vereisen die de behoeften van een organisatie aanpast. [!DNL Asset Compute Service] kan worden uitgebreid door aangepaste toepassingen te maken die worden aangeroepen vanuit Procesprofielen in [!DNL Experience Manager] . Deze douanetoepassingen behandelen na de [ gesteunde gebruiksgevallen ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
 
 >[!NOTE]
 >
->[!DNL Asset Compute Service] is alleen beschikbaar voor gebruik met [!DNL Experience Manager] als [!DNL Cloud Service].
+>[!DNL Asset Compute Service] is alleen beschikbaar voor gebruik met [!DNL Experience Manager] as a [!DNL Cloud Service] .
 
-De aangepaste toepassingen zijn zonder kop [Adobe Developer App Builder](https://github.com/AdobeDocs/app-builder) apps. Uitbreiden [!DNL Asset Compute Service] met aangepaste toepassingen eenvoudig wordt gemaakt via de [ASSET COMPUTE SDK](https://github.com/adobe/asset-compute-sdk) en Adobe Developer App Builder Developer Tool. Deze hulpmiddelen laten ontwikkelaars zich op bedrijfslogica concentreren. Aangepaste toepassingen maken is net zo eenvoudig als het maken van een Adobe zonder normale serverless [!DNL I/O Runtime] handeling. Het is één JavaScript-functie Node.js. De [basis, aangepast toepassingsvoorbeeld](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustreert dit.
+De douanetoepassingen zijn headless [ Adobe Developer App Builder ](https://github.com/AdobeDocs/app-builder) apps. Het uitbreiden [!DNL Asset Compute Service] met douanetoepassingen wordt eenvoudig gemaakt door [ Asset compute SDK ](https://github.com/adobe/asset-compute-sdk) en het ontwikkelaarswerktuig van Adobe Developer App Builder. Deze hulpmiddelen laten ontwikkelaars zich op bedrijfslogica concentreren. Het maken van aangepaste toepassingen is net zo eenvoudig als het maken van een eenvoudige Adobe [!DNL I/O Runtime] zonder server. Het is één Node.js JavaScript functie. Het [ basis voorbeeld van de douanetoepassing ](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustreert het.
 
 ## Vereisten voor vereisten en voorzieningen {#prerequisites-and-provisioning}
 
 Zorg ervoor dat u aan de volgende voorwaarden voldoet:
 
 * Adobe Developer App Builder-gereedschappen zijn op uw computer geïnstalleerd.
-* An [!DNL Experience Cloud] organisatie. Ga voor meer informatie naar [App Builder-reis starten](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials).
-* De Ervaringsorganisatie moet beschikken over [!DNL Experience Manager] als [!DNL Cloud Service] ingeschakeld.
-* [!DNL Adobe Experience Cloud] organisatie maakt deel uit van de [!DNL Adobe Developer App Builder] ontwikkelaar neigt peek programma . Ga naar [toegangsaanvraag indienen](https://developer.adobe.com/app-builder/docs/overview/getting_access).
+* Een [!DNL Experience Cloud] -organisatie. Voor meer informatie, ga naar [ Begin uw Reis van App Builder ](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials).
+* De Experience Organization moet [!DNL Experience Manager] hebben als een [!DNL Cloud Service] ingeschakeld.
+* [!DNL Adobe Experience Cloud] -organisatie maakt deel uit van het [!DNL Adobe Developer App Builder] developer nieak peek-programma. Ga naar [ hoe te om voor toegang ](https://developer.adobe.com/app-builder/docs/overview/getting_access) toe te passen.
 * Verzeker een ontwikkelaarrol of beheerdertoestemmingen in de organisatie voor de ontwikkelaar.
-* Ervoor zorgen dat Adobe [[!DNL aio-cli]](https://github.com/adobe/aio-cli) is lokaal geïnstalleerd.
+* Zorg ervoor dat Adobe [[!DNL aio-cli] ](https://github.com/adobe/aio-cli) plaatselijk geïnstalleerd is.
 
 <!-- TBD for later:
 

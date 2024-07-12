@@ -1,6 +1,6 @@
 ---
-title: Ontwikkelen voor [!DNL Asset Compute Service]
-description: Aangepaste toepassingen maken met [!DNL Asset Compute Service].
+title: Ontwikkelen voor  [!DNL Asset Compute Service]
+description: Creeer douanetoepassingen gebruikend  [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
 source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
 workflow-type: tm+mt
@@ -13,21 +13,21 @@ ht-degree: 0%
 
 Voordat u begint met het ontwikkelen van een aangepaste toepassing:
 
-* Zorg ervoor dat alle [voorwaarden](/help/using/understand-extensibility.md#prerequisites-and-provisioning) is voldaan.
-* Installeer de [vereiste softwaretools](/help/using/setup-environment.md#create-dev-environment).
-* Zie [uw omgeving instellen](setup-environment.md) om er zeker van te zijn dat u klaar bent om een aangepaste toepassing te maken.
+* Zorg ervoor dat aan alle [ eerste vereisten ](/help/using/understand-extensibility.md#prerequisites-and-provisioning) wordt voldaan.
+* Installeer de [ vereiste softwarehulpmiddelen ](/help/using/setup-environment.md#create-dev-environment).
+* Zie [ opstelling uw milieu ](setup-environment.md) om ervoor te zorgen u bereid bent om een douanetoepassing tot stand te brengen.
 
 ## Een aangepaste toepassing maken {#create-custom-application}
 
-Zorg ervoor dat u [Adobe aio-cli](https://github.com/adobe/aio-cli) lokaal geïnstalleerd.
+Zorg ervoor om [ Adobe lucht-cli ](https://github.com/adobe/aio-cli) te hebben plaatselijk geïnstalleerd.
 
-1. Als u een aangepaste toepassing wilt maken, [een App Builder-project maken](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Voer hiervoor de volgende handelingen uit `aio app init <app-name>` in uw terminal.
+1. Om een douanetoepassing tot stand te brengen, [ creeer een project van App Builder ](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Voer hiervoor `aio app init <app-name>` in de terminal uit.
 
-   Als u zich nog niet hebt aangemeld, wordt u met deze opdracht gevraagd zich aan te melden bij de [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) met uw Adobe ID. Zie [hier](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) voor meer informatie over aanmelden via de cli.
+   Als u niet reeds hebt het programma geopend, zet dit bevel browser ertoe aan vragend u om in [ Adobe Developer Console ](https://developer.adobe.com/console/user/servicesandapis) met uw Adobe ID te ondertekenen. Zie [ hier ](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) voor meer informatie bij het ondertekenen binnen van de klem.
 
-   Adobe raadt u aan zich eerst aan te melden. Als u problemen hebt, volgt u de instructies [een app maken zonder u aan te melden](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   Adobe raadt u aan zich eerst aan te melden. Als u kwesties hebt, dan volg de instructies [ om een app tot stand te brengen zonder het programma te openen ](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
-1. Na het programma openen, volg de herinneringen in CLI en selecteer `Organization`, `Project`, en `Workspace` gebruiken voor de toepassing. Kies het project en de werkruimte die u toen u creeerde [uw omgeving instellen](setup-environment.md). Wanneer gevraagd `Which extension point(s) do you wish to implement ?`, moet u `DX Asset Compute Worker`:
+1. Nadat u zich hebt aangemeld, volgt u de aanwijzingen in de CLI en selecteert u de `Organization` , `Project` en `Workspace` die u voor de toepassing wilt gebruiken. Kies het project en de werkruimte die u creeerde toen u [ opstelling uw milieu ](setup-environment.md). Selecteer `DX Asset Compute Worker` bij de aanwijzing `Which extension point(s) do you wish to implement ?` :
 
    ```sh
    $ aio app init <app-name>
@@ -40,7 +40,7 @@ Zorg ervoor dat u [Adobe aio-cli](https://github.com/adobe/aio-cli) lokaal geïn
    ◯ DX Asset Compute Worker
    ```
 
-1. Wanneer wordt gevraagd `Which Adobe I/O App features do you want to enable for this project?`, selecteert u `Actions`. Zorg ervoor dat u de selectie opheft `Web Assets` gebruiken verschillende verificatie- en autorisatiecontroles.
+1. Selecteer `Actions` wanneer dit wordt gevraagd bij `Which Adobe I/O App features do you want to enable for this project?` . Schakel de optie `Web Assets` uit als webelementen verschillende verificatie- en autorisatiecontroles gebruiken.
 
    ```bash
    ? Which Adobe I/O App features do you want to enable for this project?
@@ -51,7 +51,7 @@ Zorg ervoor dat u [Adobe aio-cli](https://github.com/adobe/aio-cli) lokaal geïn
    ◯ CI/CD: Include GitHub Actions based workflows for Build, Test and Deploy
    ```
 
-1. Wanneer gevraagd `Which type of sample actions do you want to create?`, moet u `Adobe Asset Compute Worker`:
+1. Selecteer `Adobe Asset Compute Worker` bij de aanwijzing `Which type of sample actions do you want to create?` :
 
    ```bash
    ? Which type of sample actions do you want to create?
@@ -62,11 +62,11 @@ Zorg ervoor dat u [Adobe aio-cli](https://github.com/adobe/aio-cli) lokaal geïn
 
 1. Volg de rest herinneringen en open de nieuwe toepassing in de Code van Visual Studio (of uw favoriete coderedacteur). Het bevat de basiscode en voorbeeldcode voor een aangepaste toepassing.
 
-   Lees hier over de [belangrijkste onderdelen van een App Builder-app](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
+   Lees hier over de [ belangrijkste componenten van een App Builder app ](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
 
-   De sjabloontoepassing gebruikt de Adobe [ASSET COMPUTE SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) voor het uploaden, downloaden en ordenen van toepassingsuitvoeringen hoeven ontwikkelaars alleen de aangepaste toepassingslogica te implementeren. Binnen de `actions/<worker-name>` map, de `index.js` In dit bestand kunt u de aangepaste toepassingscode toevoegen.
+   De de hefboomwerkingen van de malplaatjetoepassing [ Asset compute SDK van de Adobe ](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) voor het uploaden, het downloaden, en het orchestreren van toepassingsuitvoeringen zodat moeten de ontwikkelaars slechts de logica van de douanetoepassing uitvoeren. In de map `actions/<worker-name>` voegt u in het bestand `index.js` de aangepaste toepassingscode toe.
 
-Zie [voorbeeld aangepaste toepassingen](#try-sample) voor voorbeelden en ideeën voor aangepaste toepassingen.
+Zie [ de toepassingen van de voorbeelddouane ](#try-sample) voor voorbeelden en ideeën voor douanetoepassingen.
 
 ### Referenties toevoegen {#add-credentials}
 
@@ -79,17 +79,17 @@ If you did not log in, refer to our troubleshooting guide to [set up credentials
 
 #### Inloggegevens voor opslag van het gereedschap Ontwikkelaar {#developer-tool-credentials}
 
-Het hulpmiddel voor ontwikkelaars om aangepaste apps te evalueren met behulp van de [!DNL Asset Compute service] vereist het gebruik van een container voor cloudopslag. Deze container is essentieel voor het opslaan van testbestanden en voor het ontvangen en presenteren van uitvoeringen die door de apps worden gemaakt.
+Het hulpmiddel voor ontwikkelaars om aangepaste apps met behulp van [!DNL Asset Compute service] te evalueren, vereist het gebruik van een container voor cloudopslag. Deze container is essentieel voor het opslaan van testbestanden en voor het ontvangen en presenteren van uitvoeringen die door de apps worden gemaakt.
 
 >[!NOTE]
 >
->Deze container staat los van de cloudopslag van [!DNL Adobe Experience Manager] als [!DNL Cloud Service]. Het is alleen van toepassing voor het ontwikkelen en testen met het Asset compute developer tool.
+>Deze container staat los van de cloudopslag van [!DNL Adobe Experience Manager] als een [!DNL Cloud Service] . Het is alleen van toepassing voor het ontwikkelen en testen met het Asset compute developer tool.
 
-Zorg ervoor dat u toegang hebt tot een [ondersteunde cloudopslagcontainer](https://github.com/adobe/asset-compute-devtool#prerequisites). Deze container wordt gebruikt collectief door diverse ontwikkelaars voor verschillende projecten wanneer noodzakelijk.
+Zorg ervoor om toegang tot a [ gesteunde container van de wolkenopslag ](https://github.com/adobe/asset-compute-devtool#prerequisites) te hebben. Deze container wordt gebruikt collectief door diverse ontwikkelaars voor verschillende projecten wanneer noodzakelijk.
 
 #### Referenties toevoegen aan ENV-bestand {#add-credentials-env-file}
 
-Voeg de volgende gegevens voor het ontwikkelingsprogramma in het dialoogvenster `.env` bestand. Het bestand bevindt zich in de hoofdmap van uw App Builder-project:
+Voeg de volgende gegevens voor het ontwikkelprogramma in het `.env` -bestand in. Het bestand bevindt zich in de hoofdmap van uw App Builder-project:
 
 1. Voeg het absolute pad toe aan het gemaakte persoonlijke sleutelbestand terwijl u services toevoegt aan uw App Builder-project:
 
@@ -97,10 +97,10 @@ Voeg de volgende gegevens voor het ontwikkelingsprogramma in het dialoogvenster 
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. Download het bestand van de Adobe Developer Console. Ga naar de hoofdmap van het project en klik op Alles downloaden rechtsboven in het scherm. Het bestand wordt gedownload met `<namespace>-<workspace>.json` als de bestandsnaam. Voer een van de volgende handelingen uit:
+1. Download het bestand van de Adobe Developer Console. Ga naar de hoofdmap van het project en klik op Alles downloaden rechtsboven in het scherm. Het bestand wordt gedownload met `<namespace>-<workspace>.json` als bestandsnaam. Voer een van de volgende handelingen uit:
 
-   * Naam van bestand wijzigen als `console.json` en verplaatst u het in de hoofdmap van uw project.
-   * U kunt ook het absolute pad naar het JSON-bestand voor Adobe Developer Console-integratie toevoegen. Dit bestand is hetzelfde [`console.json`](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) bestand dat wordt gedownload in uw projectwerkruimte.
+   * Wijzig de naam van het bestand in `console.json` en verplaats het in de hoofdmap van het project.
+   * U kunt ook het absolute pad naar het JSON-bestand voor Adobe Developer Console-integratie toevoegen. Dit dossier is het zelfde [`console.json` ](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) dossier dat in uw projectwerkruimte wordt gedownload.
 
      ```conf
      ASSET_COMPUTE_INTEGRATION_FILE_PATH=
@@ -123,13 +123,13 @@ Voeg de volgende gegevens voor het ontwikkelingsprogramma in het dialoogvenster 
 
 >[!TIP]
 >
->De `config.json` bestand bevat referenties. Voeg vanuit uw project het JSON-bestand toe aan uw `.gitignore` bestand om delen te voorkomen. Hetzelfde geldt voor `.env` en `.aio` bestanden.
+>Het bestand `config.json` bevat referenties. Voeg vanuit uw project het JSON-bestand toe aan uw `.gitignore` -bestand om te voorkomen dat het wordt gedeeld. Hetzelfde geldt voor `.env` - en `.aio` -bestanden.
 
 ## De toepassing uitvoeren {#run-custom-application}
 
-Voordat u de toepassing uitvoert met het hulpprogramma voor ontwikkelaars van Asset computen, moet u de [geloofsbrieven](#developer-tool-credentials).
+Alvorens de toepassing met het hulpmiddel van de ontwikkelaar van de Asset compute uit te voeren, vorm behoorlijk de [ geloofsbrieven ](#developer-tool-credentials).
 
-Als u de toepassing wilt uitvoeren in het hulpprogramma voor ontwikkelaars, gebruikt u `aio app run` gebruiken. De handeling wordt geïmplementeerd op Adobe [!DNL I/O Runtime]en start het hulpprogramma voor ontwikkeling op uw lokale computer. Dit hulpmiddel wordt gebruikt om toepassingsverzoeken tijdens ontwikkeling te testen. Hier volgt een voorbeeld van een verzoek om uitvoering:
+Gebruik de opdracht `aio app run` om de toepassing uit te voeren in het gereedschap Ontwikkelaar. De toepassing implementeert de actie naar Adobe [!DNL I/O Runtime] en start het hulpprogramma voor ontwikkeling op uw lokale computer. Dit hulpmiddel wordt gebruikt om toepassingsverzoeken tijdens ontwikkeling te testen. Hier volgt een voorbeeld van een verzoek om uitvoering:
 
 ```json
 "renditions": [
@@ -142,24 +142,24 @@ Als u de toepassing wilt uitvoeren in het hulpprogramma voor ontwikkelaars, gebr
 
 >[!NOTE]
 >
->Gebruik de `--local` vlag met de `run` gebruiken. Het werkt niet met [!DNL Asset Compute] aangepaste toepassingen en het Asset compute-ontwikkelaarsgereedschap. Aangepaste toepassingen worden aangeroepen door de [!DNL Asset Compute] service die geen toegang heeft tot handelingen die op de lokale computers van de ontwikkelaar worden uitgevoerd.
+>Gebruik de markering `--local` niet met de opdracht `run` . De functie werkt niet met aangepaste toepassingen van [!DNL Asset Compute] en het Asset compute-ontwikkelaarsgereedschap. Aangepaste toepassingen worden aangeroepen door de service [!DNL Asset Compute] die geen toegang heeft tot handelingen die op de lokale computers van de ontwikkelaar worden uitgevoerd.
 
-Zie [hier](test-custom-application.md) hoe te om uw toepassing te testen en te zuiveren. Wanneer u klaar bent met het ontwikkelen van uw aangepaste toepassing, [uw aangepaste toepassing implementeren](deploy-custom-application.md).
+Zie [ hier ](test-custom-application.md) om uw toepassing te testen en te zuiveren. Wanneer u wordt gebeëindigd ontwikkelend uw douanetoepassing, [ stelt uw douanetoepassing ](deploy-custom-application.md) op.
 
 ## Probeer de voorbeeldtoepassing van de Adobe {#try-sample}
 
 Hieronder vindt u voorbeelden van aangepaste toepassingen:
 
-* [basisch voor de werknemer](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-basic)
-* [dierenfoto&#39;s van werknemers](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-animal-pictures)
+* [ worker-basic ](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-basic)
+* [ arbeider-dier-beelden ](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-animal-pictures)
 
 ### Aangepaste toepassing sjabloon {#template-custom-application}
 
-De [basisch voor de werknemer](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-basic) is een sjabloontoepassing. Het produceert een vertoning door het brondossier eenvoudig te kopiëren. De inhoud van deze toepassing is de sjabloon die wordt ontvangen bij het kiezen van `Adobe Asset Compute` bij het maken van de aio-app.
+[ worker-basic ](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-basic) is een malplaatjetoepassing. Het produceert een vertoning door het brondossier eenvoudig te kopiëren. De inhoud van deze toepassing is de sjabloon die wordt ontvangen wanneer u `Adobe Asset Compute` kiest bij het maken van de audio-app.
 
-Het toepassingsbestand, [`worker-basic.js`](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) gebruikt de [`asset-compute-sdk`](https://github.com/adobe/asset-compute-sdk#overview) om het bronbestand te downloaden, elke verwerking van de vertoning te ordenen en de resulterende uitvoeringen weer naar de cloudopslag te uploaden.
+Het toepassingsdossier, [`worker-basic.js` ](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) gebruikt [`asset-compute-sdk` ](https://github.com/adobe/asset-compute-sdk#overview) om het brondossier te downloaden, elke vertoningsverwerking te ordenen, en de resulterende vertoningen terug naar wolkenopslag te uploaden.
 
-De [`renditionCallback`](https://github.com/adobe/asset-compute-sdk#rendition-callback-for-worker-required) In de toepassingscode wordt gedefinieerd waar alle logica voor toepassingsverwerking wordt uitgevoerd. De renditiecallback in `worker-basic` kopieert eenvoudig de inhoud van het bronbestand naar het weergavebestand.
+De [`renditionCallback` ](https://github.com/adobe/asset-compute-sdk#rendition-callback-for-worker-required) die binnen de toepassingscode wordt bepaald is waar te om alle logica van de toepassingsverwerking uit te voeren. De rendercallback in `worker-basic` kopieert eenvoudig de inhoud van het bronbestand naar het weergavebestand.
 
 ```javascript
 const { worker } = require('@adobe/asset-compute-sdk');
@@ -185,7 +185,7 @@ exports.main = worker(async function (source, rendition) {
 });
 ```
 
-Bijvoorbeeld de [`worker-animal-pictures`](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/worker-animal-pictures.js#L46) doet een ophaalverzoek aan een statische URL van Wikimedia gebruikend [`node-httptransfer`](https://github.com/adobe/node-httptransfer#node-httptransfer) bibliotheek.
+Bijvoorbeeld, [`worker-animal-pictures` ](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/worker-animal-pictures.js#L46) doet een haalverzoek aan een statische URL van Wikimedia gebruikend de [`node-httptransfer` ](https://github.com/adobe/node-httptransfer#node-httptransfer) bibliotheek.
 
 <!-- TBD: Revisit later to see if this note is required.
 >[!NOTE]
@@ -195,7 +195,7 @@ Bijvoorbeeld de [`worker-animal-pictures`](https://github.com/adobe/asset-comput
 
 ### Aangepaste parameters doorgeven {#pass-custom-parameters}
 
-U kunt aangepaste gedefinieerde parameters doorgeven via de weergaveobjecten. Er kan binnen de toepassing naar worden verwezen in [`rendition` instructies](https://github.com/adobe/asset-compute-sdk#rendition). Een voorbeeld van een weergaveobject is:
+U kunt aangepaste gedefinieerde parameters doorgeven via de weergaveobjecten. Binnen de toepassing kan naar deze instructies worden verwezen in [`rendition` instructies ](https://github.com/adobe/asset-compute-sdk#rendition) . Een voorbeeld van een weergaveobject is:
 
 ```json
 "renditions": [
@@ -218,18 +218,18 @@ exports.main = worker(async function (source, rendition) {
 });
 ```
 
-De `example-worker-animal-pictures` geeft een aangepaste parameter door [`animal`](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/worker-animal-pictures.js#L39) om te bepalen welk bestand moet worden opgehaald van Wikimedia.
+`example-worker-animal-pictures` gaat een douaneparameter [`animal` over ](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/worker-animal-pictures.js#L39) om te bepalen welk dossier van Wikimedia moet halen.
 
 ## Ondersteuning voor verificatie en autorisatie {#authentication-authorization-support}
 
-Standaard worden aangepaste toepassingen voor Asset computen geleverd met verificatie- en verificatiecontroles voor het App Builder-project. Ingeschakeld door het instellen van de `require-adobe-auth` aantekening `true` in de `manifest.yml`.
+Standaard worden aangepaste toepassingen voor Asset computen geleverd met verificatie- en verificatiecontroles voor het App Builder-project. Ingeschakeld door de `require-adobe-auth` -annotatie in te stellen op `true` in de `manifest.yml` .
 
 ### Andere Adobe-API&#39;s openen {#access-adobe-apis}
 
 <!-- TBD: Revisit this section. Where do we document console workspace creation?
 -->
 
-De API-services toevoegen aan de [!DNL Asset Compute] Console-werkruimte gemaakt in Setup. Deze diensten maken deel uit van het JWT toegangstoken dat door wordt geproduceerd [!DNL Asset Compute Service]. De token en andere gegevens zijn toegankelijk binnen de handeling van de toepassing `params` object.
+Voeg de API-services toe aan de [!DNL Asset Compute] Console-werkruimte die in Setup is gemaakt. Deze services maken deel uit van het JWT-toegangstoken dat door [!DNL Asset Compute Service] wordt gegenereerd. Het token en andere gegevens zijn toegankelijk binnen het object application `params` .
 
 ```javascript
 const accessToken = params.auth.accessToken; // JWT token for Technical Account with entitlements from the console workspace to the API service
@@ -239,9 +239,9 @@ const orgId = params.auth.orgId; // Experience Cloud Organization
 
 ### Referenties doorgeven voor systemen van derden {#pass-credentials-for-tp}
 
-Om geloofsbrieven voor andere externe diensten te behandelen, ga hen als standaardparameters over de acties. Ze worden automatisch tijdens de doortocht versleuteld. Zie voor meer informatie [acties maken in de Adobe I/O Runtime-handleiding voor ontwikkelaars](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/). Stel ze vervolgens in met behulp van omgevingsvariabelen tijdens de implementatie. Deze parameters zijn toegankelijk in het dialoogvenster `params` in de handeling.
+Om geloofsbrieven voor andere externe diensten te behandelen, ga hen als standaardparameters over de acties. Ze worden automatisch tijdens de doortocht versleuteld. Voor meer informatie, zie [ creërend acties in de de ontwikkelaarsgids van Adobe I/O Runtime ](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/). Stel ze vervolgens in met behulp van omgevingsvariabelen tijdens de implementatie. Deze parameters zijn toegankelijk in het `params` -object binnen de handeling.
 
-Stel de standaardparameters in de `inputs` in de `manifest.yml`:
+Stel de standaardparameters in in de `inputs` in de `manifest.yml` :
 
 ```yaml
 packages:
@@ -257,9 +257,9 @@ packages:
           require-adobe-auth: true
 ```
 
-De `$VAR` expressie leest de waarde van een omgevingsvariabele met de naam `VAR`.
+De expressie `$VAR` leest de waarde van een omgevingsvariabele met de naam `VAR` .
 
-Tijdens het ontwikkelen kunt u de waarde in de lokale `.env` bestand. De reden is dat `aio` importeert omgevingsvariabelen automatisch van `.env` bestanden, samen met de variabelen die zijn ingesteld door de initiërende shell. In dit voorbeeld wordt `.env` Het bestand ziet er als volgt uit:
+Tijdens het ontwikkelen kunt u de waarde in het lokale `.env` -bestand toewijzen. De reden hiervoor is dat `aio` omgevingsvariabelen automatisch importeert uit `.env` -bestanden, samen met de variabelen die zijn ingesteld door de initiërende shell. In dit voorbeeld ziet het `.env` -bestand er als volgt uit:
 
 ```CONF
 #...
@@ -274,7 +274,7 @@ const key = params.secretKey;
 
 ## Toepassingen vergroten/verkleinen {#sizing-workers}
 
-Een toepassing wordt in een container in Adobe uitgevoerd [!DNL I/O Runtime] with [limieten](https://developer.adobe.com/runtime/docs/guides/using/system_settings/) dat door kan worden gevormd `manifest.yml`:
+Een toepassing loopt in een container in Adobe [!DNL I/O Runtime] met [ grenzen ](https://developer.adobe.com/runtime/docs/guides/using/system_settings/) die door `manifest.yml` kunnen worden gevormd:
 
 ```yaml
     actions:
@@ -288,12 +288,12 @@ Een toepassing wordt in een container in Adobe uitgevoerd [!DNL I/O Runtime] wit
 
 Vanwege de uitgebreide verwerking door Asset compute-toepassingen moet u deze limieten aanpassen voor optimale prestaties (groot genoeg om binaire elementen te verwerken) en efficiëntie (zonder bronnen te verspillen vanwege ongebruikt containergeheugen).
 
-De standaardtime-out voor acties in Runtime is een minuut, maar deze kan worden verhoogd door het instellen van de opdracht `timeout` limiet (in milliseconden). Verhoog deze tijd als u grotere bestanden wilt verwerken. Houd rekening met de totale tijd die nodig is om de bron te downloaden, het bestand te verwerken en de vertoning te uploaden. Als een handeling uitvalt, dat wil zeggen dat de activering niet wordt geretourneerd vóór de opgegeven time-outlimiet, verwijdert Runtime de container en gebruikt deze niet opnieuw.
+De standaardtime-out voor acties in Runtime is een minuut, maar deze kan worden verhoogd door de limiet `timeout` in milliseconden in te stellen. Verhoog deze tijd als u grotere bestanden wilt verwerken. Houd rekening met de totale tijd die nodig is om de bron te downloaden, het bestand te verwerken en de vertoning te uploaden. Als een handeling uitvalt, dat wil zeggen dat de activering niet wordt geretourneerd vóór de opgegeven time-outlimiet, verwijdert Runtime de container en gebruikt deze niet opnieuw.
 
 De toepassingen van de asset compute door aard neigen om netwerk en schijfInput of output gebonden te zijn. Het bronbestand moet eerst worden gedownload. De verwerking is vaak bronintensief en de resulterende uitvoeringen worden dan opnieuw geüpload.
 
-U kunt het geheugen dat aan een actiecontainer is toegewezen, in megabytes opgeven met de opdracht `memorySize` parameter. Momenteel, bepaalt deze parameter ook hoeveel toegang van cpu tot de container krijgt, en het belangrijkste is het een zeer belangrijk element van de kosten om Runtime (grotere containers kosten meer) te gebruiken. Gebruik hier een grotere waarde wanneer uw verwerking meer geheugen of cpu vereist maar ben voorzichtig om geen middelen te verspillen aangezien groter de containers zijn, lager de algemene productie is.
+U kunt het geheugen dat aan een actiecontainer wordt toegewezen, in megabytes opgeven met de parameter `memorySize` . Momenteel, bepaalt deze parameter ook hoeveel toegang van cpu tot de container krijgt, en het belangrijkste is het een zeer belangrijk element van de kosten om Runtime (grotere containers kosten meer) te gebruiken. Gebruik hier een grotere waarde wanneer uw verwerking meer geheugen of cpu vereist maar ben voorzichtig om geen middelen te verspillen aangezien groter de containers zijn, lager de algemene productie is.
 
-Bovendien is het mogelijk de gelijktijdige handelingen binnen een container te controleren met behulp van de `concurrency` instellen. Deze instelling is het aantal gelijktijdige activeringen dat een enkele container (van dezelfde handeling) krijgt. In dit model, is de actiecontainer als server Node.js die veelvoudige gezamenlijke verzoeken, tot die grens ontvangt. De standaardwaarde `memorySize` in de runtime is ingesteld op 200 MB, ideaal voor kleinere App Builder-acties. Voor Asset compute-toepassingen kan deze standaardinstelling overdreven zijn vanwege de zwaardere lokale verwerking en het hogere schijfgebruik. Sommige toepassingen, afhankelijk van hun implementatie, werken mogelijk ook niet goed met gelijktijdige activiteit. De Asset compute SDK zorgt ervoor dat de activeringen worden gescheiden door bestanden naar verschillende unieke mappen te schrijven.
+Bovendien is het mogelijk om de gelijktijdig uitgevoerde handelingen in een container te beheren met de instelling `concurrency` . Deze instelling is het aantal gelijktijdige activeringen dat een enkele container (van dezelfde handeling) krijgt. In dit model, is de actiecontainer als server Node.js die veelvoudige gezamenlijke verzoeken, tot die grens ontvangt. De standaardwaarde `memorySize` in de runtime is ingesteld op 200 MB, ideaal voor kleinere App Builder-handelingen. Voor Asset compute-toepassingen kan deze standaardinstelling overdreven zijn vanwege de zwaardere lokale verwerking en het hogere schijfgebruik. Sommige toepassingen, afhankelijk van hun implementatie, werken mogelijk ook niet goed met gelijktijdige activiteit. De Asset compute SDK zorgt ervoor dat de activeringen worden gescheiden door bestanden naar verschillende unieke mappen te schrijven.
 
-Test toepassingen om de optimale getallen te vinden voor `concurrency` en `memorySize`. Grotere containers = de hogere geheugengrens kon voor meer gelijktijdige uitvoering toestaan maar kon ook verkwistend voor lager verkeer zijn.
+Test toepassingen om de optimale getallen voor `concurrency` en `memorySize` te vinden. Grotere containers = de hogere geheugengrens kon voor meer gelijktijdige uitvoering toestaan maar kon ook verkwistend voor lager verkeer zijn.

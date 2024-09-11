@@ -2,9 +2,9 @@
 title: Ontwikkelen voor  [!DNL Asset Compute Service]
 description: Creeer douanetoepassingen gebruikend  [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
+source-git-commit: db38b9dc27505aa7e04cf58a646005fc2e0e8782
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1542'
 ht-degree: 0%
 
 ---
@@ -96,6 +96,10 @@ Voeg de volgende gegevens voor het ontwikkelprogramma in het `.env` -bestand in.
    ```conf
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
+
+   >[!NOTE]
+   >
+   >JWT is afgekeurd en persoonlijke sleutel kan niet worden gedownload. Terwijl wij aan het bijwerken van de testhulpmiddelen werken, merk op dat de douanearbeiders die met OAuth worden gecreeerd kunnen worden opgesteld maar de apparaten niet zouden werken.
 
 1. Download het bestand van de Adobe Developer Console. Ga naar de hoofdmap van het project en klik op Alles downloaden rechtsboven in het scherm. Het bestand wordt gedownload met `<namespace>-<workspace>.json` als bestandsnaam. Voer een van de volgende handelingen uit:
 

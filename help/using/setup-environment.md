@@ -2,9 +2,9 @@
 title: Stel de ontwikkelomgeving in die vereist is voor  [!DNL Asset Compute Service]
 description: De milieu opstelling van de ontwikkelaar voor  [!DNL Asset Compute Service]  beginnen en douanecode te creëren te testen.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
+source-git-commit: db38b9dc27505aa7e04cf58a646005fc2e0e8782
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,10 @@ Volg deze vereisten en instructies om een installatie te maken waarmee u [!DNL A
 1. [ creeer een project van App Builder ](https://developer.adobe.com/app-builder/docs/getting_started/first_app/). Klik **[!UICONTROL creëren nieuw project]** > **[!UICONTROL Project van malplaatje]**. Selecteer App Builder. Er wordt een nieuw App Builder-project gemaakt met twee werkruimten: `Production` en `Stage` . Voeg desgewenst extra werkruimten toe, bijvoorbeeld `Development` .
 
 1. Selecteer in het App Builder-project een werkruimte en meld u aan welke services nodig zijn voor de Asset compute. Klik **toevoegen aan Project** > **API** en voeg `Asset Compute` toe, `IO Events`, en `IO Events Management` diensten. Wanneer de eerste API wordt toegevoegd, wordt gevraagd om een persoonlijke sleutel te maken. Sla deze gegevens op uw computer op omdat u deze sleutel nodig hebt om uw aangepaste toepassing met het ontwikkelaarsgereedschap te testen.
+
+   >[!NOTE]
+   >
+   >JWT is afgekeurd en persoonlijke sleutel kan niet worden gedownload. Terwijl wij aan het bijwerken van de testhulpmiddelen werken, merk op dat de douanearbeiders die met OAuth worden gecreeerd kunnen worden opgesteld maar de apparaten niet zouden werken.
 
 ## Volgende stap {#next-step}
 

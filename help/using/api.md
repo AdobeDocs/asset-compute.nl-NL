@@ -1,6 +1,6 @@
 ---
-title: "[!DNL Asset Compute Service] HTTP API"
-description: "[!DNL Asset Compute Service] HTTP API om aangepaste toepassingen te maken."
+title: '[!DNL Asset Compute Service] HTTP-API'
+description: '[!DNL Asset Compute Service] HTTP API om aangepaste toepassingen te maken.'
 exl-id: 4b63fdf9-9c0d-4af7-839d-a95e07509750
 source-git-commit: f15b9819d3319d22deccdf7e39c0f72728baaa39
 workflow-type: tm+mt

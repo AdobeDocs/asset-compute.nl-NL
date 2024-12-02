@@ -1,5 +1,5 @@
 ---
-title: "[!DNL Adobe Asset Compute Service] Handboek"
+title: '[!DNL Adobe Asset Compute Service] Handboek'
 description: Deze documentatie behandelt  [!DNL Asset Compute Service]  taken zoals inleiding, hoe te om te ontwikkelen, te beheren, op te stellen en uw douanecode problemen op te lossen.
 exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
 source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9

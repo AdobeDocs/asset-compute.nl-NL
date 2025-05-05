@@ -27,7 +27,7 @@ Document interactively running `adobe-asset-compute` commands `test-worker` and 
 
 Met deze opdracht wordt een testframework voor aangepaste eenheden voor Asset compute-toepassingsacties in het project uitgevoerd, zoals hieronder wordt beschreven. De component is gekoppeld aan een configuratie in het `package.json` -bestand. Het is ook mogelijk om JavaScript-eenheidstests zoals Jest te laten uitvoeren. De `aio app test` voert beide uit.
 
-De {](https://github.com/adobe/aio-cli-plugin-asset-compute#install-as-local-devdependency) insteekmodule 0} air-cli-insteekmodule-asset-compute wordt ingebed als ontwikkelingsgebiedsdeel in douanetoepassing zodat het niet op bouwstijl/testsystemen moet worden geïnstalleerd.[
+De {[&#128279;](https://github.com/adobe/aio-cli-plugin-asset-compute#install-as-local-devdependency) insteekmodule 0} air-cli-insteekmodule-asset-compute wordt ingebed als ontwikkelingsgebiedsdeel in douanetoepassing zodat het niet op bouwstijl/testsystemen moet worden geïnstalleerd.
 
 ### Testframework voor toepassingseenheid {#unit-test-framework}
 

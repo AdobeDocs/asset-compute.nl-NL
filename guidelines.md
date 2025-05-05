@@ -31,7 +31,7 @@ De uitzonderingen op deze regel zijn versienota&#39;s waar de bekende kwesties m
 
 Alle ideeën die u eventueel nodig hebt om de documentatie te verbeteren, zijn welkom als bijdragen. Opmerkingen, problemen en intrekkingsverzoeken zijn echter bedoeld voor *bijdragen* alleen. Zij moeten uw vragen over hoe te om het product te gebruiken, projecten uit te voeren, of technische kwesties op te lossen niet beantwoorden.
 
-Eventuele vragen over het gebruik of technische fouten moeten via het normale supportproces via het [[!DNL Experience Manager] Klantenondersteuningsportal](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) of in de [[!DNL Experience Manager] gemeenschap](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
+Eventuele vragen over het gebruik of technische fouten moeten via het normale supportproces via het [[!DNL Experience Manager] Klantenondersteuningsportal](https://experienceleague.adobe.com/nl?support-solution=Experience+Manager#home) of in de [[!DNL Experience Manager] gemeenschap](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
 ***Documentatiebijdragen zijn geen vervanging voor de Adobe van de klantenservice*** en dergelijke bijdragen die vragen om antwoorden op ondersteunende vragen worden afgewezen.
 

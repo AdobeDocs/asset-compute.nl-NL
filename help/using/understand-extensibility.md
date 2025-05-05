@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Inleiding tot uitbreidbaarheid {#introduction-to-extensibilty}
 
-Vele vertoningsvereisten zoals het omzetten in formaten en het resizing van beelden worden gericht door [ Profielen van de Verwerking in  [!DNL Experience Manager]  als a  [!DNL Cloud Service] ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview). De complexere bedrijfsvereisten kunnen een douane-gecreeerde oplossing vereisen die de behoeften van een organisatie aanpast. [!DNL Asset Compute Service] kan worden uitgebreid door aangepaste toepassingen te maken die worden aangeroepen vanuit Procesprofielen in [!DNL Experience Manager] . Deze douanetoepassingen behandelen na de [ gesteunde gebruiksgevallen ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
+Vele vertoningsvereisten zoals het omzetten in formaten en het resizing van beelden worden gericht door [ Profielen van de Verwerking in  [!DNL Experience Manager]  als a  [!DNL Cloud Service] ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview). De complexere bedrijfsvereisten kunnen een douane-gecreeerde oplossing vereisen die de behoeften van een organisatie aanpast. [!DNL Asset Compute Service] kan worden uitgebreid door aangepaste toepassingen te maken die worden aangeroepen vanuit Procesprofielen in [!DNL Experience Manager] . Deze douanetoepassingen behandelen na de [ gesteunde gebruiksgevallen ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
 
 >[!NOTE]
 >

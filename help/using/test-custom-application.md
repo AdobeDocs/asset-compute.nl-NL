@@ -4,7 +4,7 @@ description: Test en zuivert  [!DNL Asset Compute Service]  douanetoepassing.
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
 source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,13 @@ To run tests for a custom application, run `aio asset-compute test-worker` comma
 Document interactively running `adobe-asset-compute` commands `test-worker` and `run-worker`.
 -->
 
-Met deze opdracht wordt een testframework voor aangepaste eenheden voor Asset compute-toepassingsacties in het project uitgevoerd, zoals hieronder wordt beschreven. De component is gekoppeld aan een configuratie in het `package.json` -bestand. Het is ook mogelijk om JavaScript-eenheidstests zoals Jest te laten uitvoeren. De `aio app test` voert beide uit.
+Met deze opdracht wordt een testframework voor aangepaste eenheden voor Asset Compute-toepassingsacties in het project uitgevoerd, zoals hieronder wordt beschreven. De component is gekoppeld aan een configuratie in het `package.json` -bestand. Het is ook mogelijk om JavaScript-eenheidstests zoals Jest te laten uitvoeren. De `aio app test` voert beide uit.
 
-De {[&#128279;](https://github.com/adobe/aio-cli-plugin-asset-compute#install-as-local-devdependency) insteekmodule 0} air-cli-insteekmodule-asset-compute wordt ingebed als ontwikkelingsgebiedsdeel in douanetoepassing zodat het niet op bouwstijl/testsystemen moet worden geïnstalleerd.
+De {](https://github.com/adobe/aio-cli-plugin-asset-compute#install-as-local-devdependency) insteekmodule 0} air-cli-insteekmodule-asset-compute wordt ingebed als ontwikkelingsgebiedsdeel in douanetoepassing zodat het niet op bouwstijl/testsystemen moet worden geïnstalleerd.[
 
 ### Testframework voor toepassingseenheid {#unit-test-framework}
 
-Met het testframework voor de Asset compute-toepassingseenheid kunt u toepassingen testen zonder code te schrijven. Het is afhankelijk van het principe van de bron naar het weergavebestand van toepassingen. Er moet een bepaalde bestands- en mapstructuur worden ingesteld om testcase te definiëren met bronbestanden voor tests, optionele parameters, verwachte uitvoeringen en aangepaste validatiescripts. Standaard worden de uitvoeringen vergeleken voor de gelijkheid van bytes. Bovendien kunnen externe HTTP-services eenvoudig worden gecontroleerd met behulp van eenvoudige JSON-bestanden.
+Met het testframework voor Asset Compute-toepassingseenheden kunt u toepassingen testen zonder code te schrijven. Het is afhankelijk van het principe van de bron naar het weergavebestand van toepassingen. Er moet een bepaalde bestands- en mapstructuur worden ingesteld om testcase te definiëren met bronbestanden voor tests, optionele parameters, verwachte uitvoeringen en aangepaste validatiescripts. Standaard worden de uitvoeringen vergeleken voor de gelijkheid van bytes. Bovendien kunnen externe HTTP-services eenvoudig worden gecontroleerd met behulp van eenvoudige JSON-bestanden.
 
 ### Tests toevoegen {#add-tests}
 
@@ -158,7 +158,7 @@ Parameterbestand met reden van fout:
 }
 ```
 
-Zie een volledige lijst en een beschrijving van [ de foutenredenen van de Asset compute ](https://github.com/adobe/asset-compute-commons#error-reasons).
+Zie een volledige lijst en een beschrijving van [ de foutenredenen van Asset Compute ](https://github.com/adobe/asset-compute-commons#error-reasons).
 
 ## Fouten opsporen in een aangepaste toepassing {#debug-custom-worker}
 
@@ -176,7 +176,7 @@ Veel van deze stappen worden automatisch uitgevoerd door de functie `aio` out-of
 1. Voeg in het JSON-bestand aanvullende instellingen toe aan uw gebruikersinstellingen. Het houdt het gebruiken van oude debugger van de Code van Visual Studio. Nieuwe heeft [ sommige kwesties ](https://github.com/apache/openwhisk-wskdebug/issues/74) met wskdebug: `"debug.javascript.usePreview": false`.
 1. Sluit alle instanties van apps die via `aio app run` zijn geopend.
 1. De nieuwste code implementeren met `aio app deploy` .
-1. Voer alleen de Asset compute Devtool uit met `aio asset-compute devtool` . Houd het open.
+1. Voer alleen Asset Compute Devtool uit met `aio asset-compute devtool` . Houd het open.
 1. In de Redacteur van de Code van Visual Studio, voeg de volgende zuivert configuratie aan uw `launch.json` toe:
 
    ```json
@@ -200,9 +200,9 @@ Veel van deze stappen worden automatisch uitgevoerd door de functie `aio` out-of
 
    Haal de `ACTION NAME` op van de uitvoer van `aio app deploy` .
 
-1. Selecteer `wskdebug worker` in de configuratie voor foutopsporing/uitvoeren en druk op het afspeelpictogram. Wacht op het om te beginnen tot het **[!UICONTROL Klaar voor activeringen]** in **[!UICONTROL toont zuivert het venster van de Console]**.
+1. Selecteer `wskdebug worker` in de configuratie voor foutopsporing/uitvoeren en druk op het afspeelpictogram. Wacht tot het programma is gestart totdat het **[!UICONTROL Ready for activations]** in het **[!UICONTROL Debug Console]** -venster wordt weergegeven.
 
-1. Klik **[!UICONTROL looppas]** in Devtool. U kunt de acties zien die in de redacteur van de Code van Visual Studio lopen en het logboekbegin die toont.
+1. Klik op **[!UICONTROL run]** in het gereedschap Ontwikkelen. U kunt de acties zien die in de redacteur van de Code van Visual Studio lopen en het logboekbegin die toont.
 
 1. Stel een onderbrekingspunt in de code in. Dan loop ik opnieuw en het zou moeten slaan.
 

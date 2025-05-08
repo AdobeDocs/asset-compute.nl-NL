@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # Inleiding tot uitbreidbaarheid {#introduction-to-extensibilty}
 
-Vele vertoningsvereisten zoals het omzetten in formaten en het resizing van beelden worden gericht door [ Profielen van de Verwerking in  [!DNL Experience Manager]  als a  [!DNL Cloud Service] ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview). De complexere bedrijfsvereisten kunnen een douane-gecreeerde oplossing vereisen die de behoeften van een organisatie aanpast. [!DNL Asset Compute Service] kan worden uitgebreid door aangepaste toepassingen te maken die worden aangeroepen vanuit Procesprofielen in [!DNL Experience Manager] . Deze douanetoepassingen behandelen na de [ gesteunde gebruiksgevallen ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
+Vele vertoningsvereisten zoals het omzetten in formaten en het resizing van beelden worden gericht door [ Profielen van de Verwerking in  [!DNL Experience Manager]  als a  [!DNL Cloud Service] ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview). De complexere bedrijfsvereisten kunnen een douane-gecreeerde oplossing vereisen die de behoeften van een organisatie aanpast. [!DNL Asset Compute Service] kan worden uitgebreid door aangepaste toepassingen te maken die worden aangeroepen vanuit Procesprofielen in [!DNL Experience Manager] . Deze douanetoepassingen behandelen na de [ gesteunde gebruiksgevallen ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
 
 >[!NOTE]
 >
 >[!DNL Asset Compute Service] is alleen beschikbaar voor gebruik met [!DNL Experience Manager] as a [!DNL Cloud Service] .
 
-De douanetoepassingen zijn headless [ Adobe Developer App Builder ](https://github.com/AdobeDocs/app-builder) apps. Het uitbreiden [!DNL Asset Compute Service] met douanetoepassingen wordt eenvoudig gemaakt door [ Asset compute SDK ](https://github.com/adobe/asset-compute-sdk) en het ontwikkelaarswerktuig van Adobe Developer App Builder. Deze hulpmiddelen laten ontwikkelaars zich op bedrijfslogica concentreren. Het maken van aangepaste toepassingen is net zo eenvoudig als het maken van een eenvoudige Adobe [!DNL I/O Runtime] zonder server. Het is één Node.js JavaScript functie. Het [ basis voorbeeld van de douanetoepassing ](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustreert het.
+De douanetoepassingen zijn headless [ Adobe Developer App Builder ](https://github.com/AdobeDocs/app-builder) apps. Het uitbreiden [!DNL Asset Compute Service] met douanetoepassingen wordt eenvoudig gemaakt door [ Asset Compute SDK ](https://github.com/adobe/asset-compute-sdk) en het ontwikkelaarswerktuig van Adobe Developer App Builder. Deze hulpmiddelen laten ontwikkelaars zich op bedrijfslogica concentreren. Het maken van aangepaste toepassingen is net zo eenvoudig als het maken van een Adobe-handeling zonder normale serverless [!DNL I/O Runtime] . Het is één Node.js JavaScript functie. Het [ basis voorbeeld van de douanetoepassing ](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustreert het.
 
 ## Vereisten voor vereisten en voorzieningen {#prerequisites-and-provisioning}
 
@@ -28,7 +28,7 @@ Zorg ervoor dat u aan de volgende voorwaarden voldoet:
 * De Experience Organization moet [!DNL Experience Manager] hebben als een [!DNL Cloud Service] ingeschakeld.
 * [!DNL Adobe Experience Cloud] -organisatie maakt deel uit van het [!DNL Adobe Developer App Builder] developer nieak peek-programma. Ga naar [ hoe te om voor toegang ](https://developer.adobe.com/app-builder/docs/overview/getting_access) toe te passen.
 * Verzeker een ontwikkelaarrol of beheerdertoestemmingen in de organisatie voor de ontwikkelaar.
-* Zorg ervoor dat Adobe [[!DNL aio-cli] ](https://github.com/adobe/aio-cli) plaatselijk geïnstalleerd is.
+* Controleer of Adobe [[!DNL aio-cli] ](https://github.com/adobe/aio-cli) lokaal is geïnstalleerd.
 
 <!-- TBD for later:
 

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!DNL Asset Compute Service] HTTP-API {#asset-compute-http-api}
 
-Het gebruik van de API is beperkt tot ontwikkelingsdoeleinden. De API wordt als context verstrekt wanneer het ontwikkelen van douanetoepassingen. [!DNL Adobe Experience Manager] als [!DNL Cloud Service] gebruikt de API om de verwerkingsgegevens door te geven aan een aangepaste toepassing. Voor meer informatie, zie [ de activamicrodiensten van het Gebruik en Profielen van de Verwerking ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
+Het gebruik van de API is beperkt tot ontwikkelingsdoeleinden. De API wordt als context verstrekt wanneer het ontwikkelen van douanetoepassingen. [!DNL Adobe Experience Manager] als [!DNL Cloud Service] gebruikt de API om de verwerkingsgegevens door te geven aan een aangepaste toepassing. Voor meer informatie, zie [ de activamicrodiensten van het Gebruik en Profielen van de Verwerking ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Voor deze bereiken moet het [!DNL Adobe Developer Console] -project zijn geabonn
 * Basis
    * bereik: `openid,AdobeID`
 
-* Asset compute
+* Asset Compute
    * metarek: `asset_compute_meta`
    * bereik: `asset_compute,read_organizations`
 
@@ -79,7 +79,7 @@ Voor deze bereiken moet het [!DNL Adobe Developer Console] -project zijn geabonn
 
 Elke cliënt van [!DNL Asset Compute service] - een uniek [!DNL Adobe Developer Console] project dat aan de dienst wordt ingetekend - moet [ registreren ](#register-request) alvorens verwerkingsverzoeken te maken. De registratiestap retourneert het unieke gebeurtenisjournaal dat vereist is om de asynchrone gebeurtenissen van de uitvoering op te halen.
 
-Aan het eind van zijn levenscyclus, kan een cliënt [&#128279;](#unregister-request) unregister.
+Aan het eind van zijn levenscyclus, kan een cliënt [ ](#unregister-request) unregister.
 
 ### Aanvraag registreren {#register-request}
 
@@ -344,11 +344,11 @@ Statuscodes:
 
 De meeste cliënten zijn waarschijnlijk geneigd om het zelfde verzoek met [ exponentiële backoff ](https://en.wikipedia.org/wiki/Exponential_backoff) op om het even welke fout *behalve* configuratiekwesties zoals 401 of 403, of ongeldige verzoeken zoals 400 opnieuw te proberen. Afgezien van de reguliere tariefbeperking door middel van 429 reacties, kan een uitval of beperking van een tijdelijke dienst leiden tot 5xx fouten. Het zou dan raadzaam zijn om na een bepaalde periode opnieuw te proberen.
 
-Alle JSON-reacties (indien aanwezig) bevatten `requestId` . Dit is dezelfde waarde als de `X-Request-Id` -header. Adobe raadt aan de koptekst te lezen, omdat deze altijd aanwezig is. `requestId` wordt ook geretourneerd in alle gebeurtenissen die betrekking hebben op het verwerken van aanvragen als `requestId` . Clients mogen geen aanname maken over de opmaak van deze tekenreeks. Dit is een ondoorzichtige tekenreeks-id.
+Alle JSON-reacties (indien aanwezig) bevatten `requestId` . Dit is dezelfde waarde als de `X-Request-Id` -header. Adobe raadt aan de koptekst te lezen omdat deze altijd aanwezig is. `requestId` wordt ook geretourneerd in alle gebeurtenissen die betrekking hebben op het verwerken van aanvragen als `requestId` . Clients mogen geen aanname maken over de opmaak van deze tekenreeks. Dit is een ondoorzichtige tekenreeks-id.
 
 ## Aanmelden bij nabewerking {#opt-in-to-post-processing}
 
-De [ Asset compute SDK ](https://github.com/adobe/asset-compute-sdk) steunt een reeks basisbeeld naverwerkingsopties. Aangepaste workers kunnen zich expliciet aanmelden bij nabewerking door het veld `postProcess` voor het weergaveobject in te stellen op `true` .
+De [ SDK van Asset Compute ](https://github.com/adobe/asset-compute-sdk) steunt een reeks basisbeeld naverwerkingsopties. Aangepaste workers kunnen zich expliciet aanmelden bij nabewerking door het veld `postProcess` voor het weergaveobject in te stellen op `true` .
 
 De ondersteunde gebruiksgevallen zijn:
 
@@ -361,7 +361,7 @@ De ondersteunde gebruiksgevallen zijn:
 
 ## Watermerkelementen {#add-watermark}
 
-De [ Asset compute SDK ](https://github.com/adobe/asset-compute-sdk) steunt het toevoegen van een watermerk aan PNG, JPEG, TIFF, en de dossiers van het GIF beeld. Het watermerk wordt toegevoegd na de vertoningsinstructies in het `watermark` -object op de vertoning.
+De [ SDK van Asset Compute ](https://github.com/adobe/asset-compute-sdk) steunt het toevoegen van een watermerk aan PNG, JPEG, TIFF, en de beelddossiers van GIF. Het watermerk wordt toegevoegd na de vertoningsinstructies in het `watermark` -object op de vertoning.
 
 Watermerken worden uitgevoerd tijdens de nabewerking van de vertoning. Om activa van het watermerk te voorzien, opteert de douanearbeider [ in post-verwerking ](#opt-in-to-post-processing) door het gebied `postProcess` op het vertoningsvoorwerp aan `true` te plaatsen. Als de worker niet meedoet, wordt er geen watermerken toegepast, zelfs niet als het watermerkobject is ingesteld op het weergaveobject in de aanvraag.
 
@@ -373,15 +373,15 @@ Hieronder vindt u de beschikbare opties voor de array `renditions` in [`/process
 
 | Naam | Type | Beschrijving | Voorbeeld |
 |-------------------|----------|-------------|---------|
-| `fmt` | `string` | De doelindeling van uitvoeringen kan ook `text` zijn voor tekstextractie en `xmp` voor het extraheren van XMP metagegevens als XML. Zie [ gesteunde formaten ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support) | `png` |
+| `fmt` | `string` | De doelindeling van de uitvoeringen kan ook `text` zijn voor tekstextractie en `xmp` voor het extraheren van XMP-metagegevens als XML. Zie [ gesteunde formaten ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/file-format-support) | `png` |
 | `worker` | `string` | URL van a [ douanetoepassing ](develop-custom-application.md). Moet een `https://` URL zijn. Als dit veld aanwezig is, maakt een aangepaste toepassing de vertoning. Een ander setveld voor uitvoering wordt vervolgens gebruikt in de aangepaste toepassing. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
-| `target` | `string` | De URL waarnaar de gegenereerde uitvoering moet worden geüpload met HTTP-PUT. | `http://w.com/img.jpg` |
-| `target` | `object` | Vooraf ondertekende URL met meerdere delen uploadgegevens voor de gegenereerde uitvoering. Deze informatie is voor [ AEM/de Directe Binaire Upload van Oak ](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) met dit [ multipart uploadgedrag ](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br> Gebieden:<ul><li>`urls`: array van tekenreeksen, één voor elke vooraf ondertekende deel-URL</li><li>`minPartSize`: de minimale grootte die voor één onderdeel moet worden gebruikt = url</li><li>`maxPartSize`: de maximale grootte die voor één onderdeel kan worden gebruikt = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
+| `target` | `string` | De URL waarnaar de gegenereerde uitvoering moet worden geüpload met HTTP PUT. | `http://w.com/img.jpg` |
+| `target` | `object` | Vooraf ondertekende URL met meerdere delen uploadgegevens voor de gegenereerde uitvoering. Deze informatie is voor [ AEM/Oak Directe Binaire Upload ](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) met dit [ multipart uploadgedrag ](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br> Gebieden:<ul><li>`urls`: array van tekenreeksen, één voor elke vooraf ondertekende deel-URL</li><li>`minPartSize`: de minimale grootte die voor één onderdeel moet worden gebruikt = url</li><li>`maxPartSize`: de maximale grootte die voor één onderdeel kan worden gebruikt = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
 | `userData` | `object` | Optioneel. De client bestuurt de gereserveerde ruimte en geeft deze door zoals bij weergavegebeurtenissen. Hiermee kan een client aangepaste informatie toevoegen om uitvoeringsgebeurtenissen te identificeren. Het mag niet worden gewijzigd of vertrouwd op in douanetoepassingen, aangezien de cliënten vrij zijn om het op elk ogenblik te veranderen. | `{ ... }` |
 
 ### Vertoningsspecifieke velden {#rendition-specific-fields}
 
-Voor een lijst van momenteel gesteunde dossierformaten, zie [ gesteunde dossierformaten ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support).
+Voor een lijst van momenteel gesteunde dossierformaten, zie [ gesteunde dossierformaten ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/file-format-support).
 
 | Naam | Type | Beschrijving | Voorbeeld |
 |-------------------|----------|-------------|---------|
@@ -391,9 +391,9 @@ Voor een lijst van momenteel gesteunde dossierformaten, zie [ gesteunde dossierf
 | `height` | `number` | Hoogte in pixels. alleen voor afbeeldingsuitvoeringen. | `200` |
 |                   |          | De hoogte-breedteverhouding blijft altijd behouden als: <ul> <li> Zowel `width` als `height` worden opgegeven en de afbeelding past op de grootte terwijl de hoogte-breedteverhouding behouden blijft </li><li> Als er maar `width` of `height` wordt opgegeven, gebruikt de resulterende afbeelding de corresponderende dimensie terwijl de hoogte-breedteverhouding behouden blijft</li><li> Als `width` of `height` niet is opgegeven, wordt de oorspronkelijke pixelgrootte van de afbeelding gebruikt. Het hangt van het brontype af. Voor sommige indelingen, zoals PDF-bestanden, wordt een standaardgrootte gebruikt. Er kan een maximumgrootte zijn.</li></ul> | |
 | `quality` | `number` | Geef JPEG-kwaliteit op in het bereik van `1` tot `100` . Alleen van toepassing op afbeeldingsuitvoeringen. | `90` |
-| `xmp` | `string` | Wordt alleen gebruikt door XMP terugverwijzing van metagegevens. Het is XMP base64 gecodeerd om terug te schrijven naar de opgegeven uitvoering. | |
+| `xmp` | `string` | Wordt alleen gebruikt door terugschrijven van XMP-metagegevens. Het is XMP met base64-codering om terug te schrijven naar de opgegeven uitvoering. | |
 | `interlace` | `bool` | Maak geïnterlinieerde PNG- of GIF- of progressieve JPEG door deze in te stellen op `true` . Dit heeft geen invloed op andere bestandsindelingen. | |
-| `jpegSize` | `number` | De grootte van het JPEG-bestand in bytes wordt benaderd. Alle `quality` -instellingen worden genegeerd. Dit heeft geen invloed op andere indelingen. | |
+| `jpegSize` | `number` | Grootte JPEG-bestand, ongeveer in bytes. Alle `quality` -instellingen worden genegeerd. Dit heeft geen invloed op andere indelingen. | |
 | `dpi` | `number` of `object` | Stel de DPI voor x en y in. Voor de eenvoud kan de waarde ook op één getal worden ingesteld, dat voor zowel x als y wordt gebruikt. Dit heeft geen invloed op de afbeelding zelf. | `96` of `{ xdpi: 96, ydpi: 96 }` |
 | `convertToDpi` | `number` of `object` | x- en y-DPI-waarden opnieuw samplen terwijl de fysieke grootte behouden blijft. Voor de eenvoud kan de waarde ook op één getal worden ingesteld, dat voor zowel x als y wordt gebruikt. | `96` of `{ xdpi: 96, ydpi: 96 }` |
 | `files` | `array` | Lijst met bestanden die moeten worden opgenomen in het ZIP-archief (`fmt=zip`). Elk item kan een URL-tekenreeks zijn of een object met de velden:<ul><li>`url`: URL om bestand te downloaden</li><li>`path`: Sla het bestand onder dit pad op in het ZIP-bestand</li></ul> | `[{ "url": "https://host/asset.jpg", "path": "folder/location/asset.jpg" }]` |
@@ -413,7 +413,7 @@ De PNG-indeling wordt gebruikt als een watermerk.
 
 Wanneer de verwerking van een vertoning is voltooid of wanneer een fout optreedt, wordt een gebeurtenis verzonden naar een Adobe [!DNL `I/O Events Journal`] . Clients moeten luisteren naar de journaal-URL die via [`/register`](#register) wordt geboden. De journaalreactie bevat een array `event` die bestaat uit één object voor elke gebeurtenis, waarvan het veld `event` de werkelijke gebeurtenislading bevat.
 
-Het type Adobe [!DNL `I/O Events`] voor alle gebeurtenissen van [!DNL Asset Compute Service] is `asset_compute` . Het tijdschrift wordt alleen automatisch op dit gebeurtenistype geabonneerd en er is geen verdere vereiste om te filteren op basis van het gebeurtenistype [!DNL Adobe Developer] . De service-specifieke gebeurtenistypen zijn beschikbaar in de eigenschap `type` van de gebeurtenis.
+Het Adobe [!DNL `I/O Events`] -type voor alle gebeurtenissen van de lus [!DNL Asset Compute Service] is `asset_compute` . Het tijdschrift wordt alleen automatisch op dit gebeurtenistype geabonneerd en er is geen verdere vereiste om te filteren op basis van het gebeurtenistype [!DNL Adobe Developer] . De service-specifieke gebeurtenistypen zijn beschikbaar in de eigenschap `type` van de gebeurtenis.
 
 ### Gebeurtenistypen {#event-types}
 

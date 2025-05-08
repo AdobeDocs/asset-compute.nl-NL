@@ -64,7 +64,7 @@ Zorg ervoor om [ Adobe lucht-cli ](https://github.com/adobe/aio-cli) te hebben p
 
    Lees hier over de [ belangrijkste componenten van een App Builder app ](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
 
-   De de hefboomwerkingen van de malplaatjetoepassing [ Asset compute SDK van de Adobe ](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) voor het uploaden, het downloaden, en het orchestreren van toepassingsuitvoeringen zodat moeten de ontwikkelaars slechts de logica van de douanetoepassing uitvoeren. In de map `actions/<worker-name>` voegt u in het bestand `index.js` de aangepaste toepassingscode toe.
+   De hefboomwerkingen van de malplaatjetoepassing Adobe [ Asset Compute SDK ](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) voor het uploaden, het downloaden, en het orchestreren van toepassingsuitvoeringen zodat moeten de ontwikkelaars slechts de logica van de douanetoepassing uitvoeren. In de map `actions/<worker-name>` voegt u in het bestand `index.js` de aangepaste toepassingscode toe.
 
 Zie [ de toepassingen van de voorbeelddouane ](#try-sample) voor voorbeelden en ideeën voor douanetoepassingen.
 
@@ -83,7 +83,7 @@ Het hulpmiddel voor ontwikkelaars om aangepaste apps met behulp van [!DNL Asset 
 
 >[!NOTE]
 >
->Deze container staat los van de cloudopslag van [!DNL Adobe Experience Manager] als een [!DNL Cloud Service] . Het is alleen van toepassing voor het ontwikkelen en testen met het Asset compute developer tool.
+>Deze container staat los van de cloudopslag van [!DNL Adobe Experience Manager] als een [!DNL Cloud Service] . Dit geldt alleen voor het ontwikkelen en testen met het Asset Compute-hulpprogramma voor ontwikkelaars.
 
 Zorg ervoor om toegang tot a [ gesteunde container van de wolkenopslag ](https://github.com/adobe/asset-compute-devtool#prerequisites) te hebben. Deze container wordt gebruikt collectief door diverse ontwikkelaars voor verschillende projecten wanneer noodzakelijk.
 
@@ -131,9 +131,9 @@ Voeg de volgende gegevens voor het ontwikkelprogramma in het `.env` -bestand in.
 
 ## De toepassing uitvoeren {#run-custom-application}
 
-Alvorens de toepassing met het hulpmiddel van de ontwikkelaar van de Asset compute uit te voeren, vorm behoorlijk de [ geloofsbrieven ](#developer-tool-credentials).
+Alvorens de toepassing met het de ontwikkelaarshulpmiddel van Asset Compute uit te voeren, vorm behoorlijk de [ geloofsbrieven ](#developer-tool-credentials).
 
-Gebruik de opdracht `aio app run` om de toepassing uit te voeren in het gereedschap Ontwikkelaar. De toepassing implementeert de actie naar Adobe [!DNL I/O Runtime] en start het hulpprogramma voor ontwikkeling op uw lokale computer. Dit hulpmiddel wordt gebruikt om toepassingsverzoeken tijdens ontwikkeling te testen. Hier volgt een voorbeeld van een verzoek om uitvoering:
+Gebruik de opdracht `aio app run` om de toepassing uit te voeren in het gereedschap Ontwikkelaar. De toepassing implementeert de handeling naar Adobe [!DNL I/O Runtime] en start het hulpprogramma voor ontwikkeling op uw lokale computer. Dit hulpmiddel wordt gebruikt om toepassingsverzoeken tijdens ontwikkeling te testen. Hier volgt een voorbeeld van een verzoek om uitvoering:
 
 ```json
 "renditions": [
@@ -146,11 +146,11 @@ Gebruik de opdracht `aio app run` om de toepassing uit te voeren in het gereedsc
 
 >[!NOTE]
 >
->Gebruik de markering `--local` niet met de opdracht `run` . De functie werkt niet met aangepaste toepassingen van [!DNL Asset Compute] en het Asset compute-ontwikkelaarsgereedschap. Aangepaste toepassingen worden aangeroepen door de service [!DNL Asset Compute] die geen toegang heeft tot handelingen die op de lokale computers van de ontwikkelaar worden uitgevoerd.
+>Gebruik de markering `--local` niet met de opdracht `run` . De functie werkt niet met aangepaste toepassingen van [!DNL Asset Compute] en het Asset Compute-ontwikkelaarsgereedschap. Aangepaste toepassingen worden aangeroepen door de service [!DNL Asset Compute] die geen toegang heeft tot handelingen die op de lokale computers van de ontwikkelaar worden uitgevoerd.
 
 Zie [ hier ](test-custom-application.md) om uw toepassing te testen en te zuiveren. Wanneer u wordt gebeëindigd ontwikkelend uw douanetoepassing, [ stelt uw douanetoepassing ](deploy-custom-application.md) op.
 
-## Probeer de voorbeeldtoepassing van de Adobe {#try-sample}
+## Probeer de voorbeeldtoepassing van Adobe {#try-sample}
 
 Hieronder vindt u voorbeelden van aangepaste toepassingen:
 
@@ -226,9 +226,9 @@ exports.main = worker(async function (source, rendition) {
 
 ## Ondersteuning voor verificatie en autorisatie {#authentication-authorization-support}
 
-Standaard worden aangepaste toepassingen voor Asset computen geleverd met verificatie- en verificatiecontroles voor het App Builder-project. Ingeschakeld door de `require-adobe-auth` -annotatie in te stellen op `true` in de `manifest.yml` .
+Standaard worden bij aangepaste Asset Compute-toepassingen verificatie- en verificatiecontroles voor het App Builder-project geleverd. Ingeschakeld door de `require-adobe-auth` -annotatie in te stellen op `true` in de `manifest.yml` .
 
-### Andere Adobe-API&#39;s openen {#access-adobe-apis}
+### Andere Adobe API&#39;s openen {#access-adobe-apis}
 
 <!-- TBD: Revisit this section. Where do we document console workspace creation?
 -->
@@ -290,14 +290,14 @@ Een toepassing loopt in een container in Adobe [!DNL I/O Runtime] met [ grenzen 
           concurrency: 1
 ```
 
-Vanwege de uitgebreide verwerking door Asset compute-toepassingen moet u deze limieten aanpassen voor optimale prestaties (groot genoeg om binaire elementen te verwerken) en efficiëntie (zonder bronnen te verspillen vanwege ongebruikt containergeheugen).
+Vanwege de uitgebreide verwerking door Asset Compute-toepassingen moet u deze limieten aanpassen voor optimale prestaties (groot genoeg voor de verwerking van binaire elementen) en efficiëntie (zonder bronnen te verspillen vanwege ongebruikt containergeheugen).
 
 De standaardtime-out voor acties in Runtime is een minuut, maar deze kan worden verhoogd door de limiet `timeout` in milliseconden in te stellen. Verhoog deze tijd als u grotere bestanden wilt verwerken. Houd rekening met de totale tijd die nodig is om de bron te downloaden, het bestand te verwerken en de vertoning te uploaden. Als een handeling uitvalt, dat wil zeggen dat de activering niet wordt geretourneerd vóór de opgegeven time-outlimiet, verwijdert Runtime de container en gebruikt deze niet opnieuw.
 
-De toepassingen van de asset compute door aard neigen om netwerk en schijfInput of output gebonden te zijn. Het bronbestand moet eerst worden gedownload. De verwerking is vaak bronintensief en de resulterende uitvoeringen worden dan opnieuw geüpload.
+Asset Compute-toepassingen zijn van nature gebonden aan netwerk- en schijfinvoer of uitvoer. Het bronbestand moet eerst worden gedownload. De verwerking is vaak bronintensief en de resulterende uitvoeringen worden dan opnieuw geüpload.
 
-U kunt het geheugen dat aan een actiecontainer wordt toegewezen, in megabytes opgeven met de parameter `memorySize` . Momenteel, bepaalt deze parameter ook hoeveel toegang van cpu tot de container krijgt, en het belangrijkste is het een zeer belangrijk element van de kosten om Runtime (grotere containers kosten meer) te gebruiken. Gebruik hier een grotere waarde wanneer uw verwerking meer geheugen of cpu vereist maar ben voorzichtig om geen middelen te verspillen aangezien groter de containers zijn, lager de algemene productie is.
+U kunt het geheugen dat aan een actiecontainer wordt toegewezen, in megabytes opgeven met de parameter `memorySize` . Momenteel bepaalt deze parameter ook hoeveel CPU toegang heeft tot de container, en het belangrijkste is dat het een belangrijk element is van de gebruikskosten van Runtime (grotere containers kosten meer). Gebruik hier een grotere waarde wanneer uw verwerking meer geheugen of CPU vereist maar zorg ervoor dat u geen bronnen verspilt, aangezien hoe groter de containers zijn, hoe lager de totale doorvoer is.
 
-Bovendien is het mogelijk om de gelijktijdig uitgevoerde handelingen in een container te beheren met de instelling `concurrency` . Deze instelling is het aantal gelijktijdige activeringen dat een enkele container (van dezelfde handeling) krijgt. In dit model, is de actiecontainer als server Node.js die veelvoudige gezamenlijke verzoeken, tot die grens ontvangt. De standaardwaarde `memorySize` in de runtime is ingesteld op 200 MB, ideaal voor kleinere App Builder-handelingen. Voor Asset compute-toepassingen kan deze standaardinstelling overdreven zijn vanwege de zwaardere lokale verwerking en het hogere schijfgebruik. Sommige toepassingen, afhankelijk van hun implementatie, werken mogelijk ook niet goed met gelijktijdige activiteit. De Asset compute SDK zorgt ervoor dat de activeringen worden gescheiden door bestanden naar verschillende unieke mappen te schrijven.
+Bovendien is het mogelijk om de gelijktijdig uitgevoerde handelingen in een container te beheren met de instelling `concurrency` . Deze instelling is het aantal gelijktijdige activeringen dat een enkele container (van dezelfde handeling) krijgt. In dit model, is de actiecontainer als server Node.js die veelvoudige gezamenlijke verzoeken, tot die grens ontvangt. De standaardwaarde `memorySize` in de runtime is ingesteld op 200 MB, ideaal voor kleinere App Builder-handelingen. Voor Asset Compute-toepassingen kan deze standaardinstelling overdreven zijn vanwege de zwaardere lokale verwerking en het hogere schijfgebruik. Sommige toepassingen, afhankelijk van hun implementatie, werken mogelijk ook niet goed met gelijktijdige activiteit. De Asset Compute SDK zorgt ervoor dat activeringen worden gescheiden door bestanden naar verschillende unieke mappen te schrijven.
 
 Test toepassingen om de optimale getallen voor `concurrency` en `memorySize` te vinden. Grotere containers = de hogere geheugengrens kon voor meer gelijktijdige uitvoering toestaan maar kon ook verkwistend voor lager verkeer zijn.

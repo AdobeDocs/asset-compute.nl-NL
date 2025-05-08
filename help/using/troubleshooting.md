@@ -4,31 +4,31 @@ description: Los en zuiver douanetoepassingen problemen op gebruikend  [!DNL Ass
 exl-id: 017fff91-e5e9-4a30-babf-5faa1ebefc2f
 source-git-commit: c6f747ebd6d1b17834f1af0837609a148804f8a9
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
 
 # Problemen oplossen {#troubleshoot}
 
-Enkele algemene tips voor het oplossen van problemen die u kunnen helpen problemen op te lossen met de service Asset compute zijn:
+Enkele algemene tips voor het oplossen van problemen die u kunnen helpen problemen op te lossen met Asset Compute Service zijn:
 
 * Zorg ervoor dat de JavaScript-toepassing niet vastloopt bij het opstarten. Dergelijke neerstortingen zijn gewoonlijk verwant aan een ontbrekende bibliotheek of een gebiedsdeel.
 * Zorg ervoor dat in het `package.json` -bestand van de toepassing wordt verwezen naar alle afhankelijkheden die moeten worden geïnstalleerd.
 * Verzeker om het even welke fouten die uit schoonmaakbeurt bij mislukking kunnen voortkomen niet hun eigen fouten produceren die het originele probleem verbergen.
 
-* Wanneer u het ontwikkelaarsprogramma voor het eerst start met een nieuwe [!DNL Asset Compute Service] -integratie, kan dit mislukken bij het eerste verwerkingsverzoek als het Asset compute Events Journal niet volledig is ingesteld. Wacht enige tijd op het dagboek aan opstelling alvorens een ander verzoek te verzenden.
-* Zorg ervoor dat alle vereiste API&#39;s (Asset compute, Adobe [!DNL I/O Events], Gebeurtenisbeheer en Runtime) zijn opgenomen in uw Adobe [!DNL `I/O Project`] en Workspace om fouten in `/register` - of `/process` -aanvragen te voorkomen.
+* Wanneer u het ontwikkelaarsprogramma voor het eerst start met een nieuwe [!DNL Asset Compute Service] -integratie, kan dit resulteren in een mislukking van de eerste verwerkingsaanvraag als het Asset Compute Events Journal niet volledig is ingesteld. Wacht enige tijd op het dagboek aan opstelling alvorens een ander verzoek te verzenden.
+* Zorg ervoor dat alle vereiste API&#39;s (Asset Compute, Adobe [!DNL I/O Events], Events Management en Runtime) zijn opgenomen in uw Adobe [!DNL `I/O Project`] en Workspace om fouten in `/register` - of `/process` -aanvragen te voorkomen.
 
 ## Problemen aanmelden via Adobe [!DNL aio-cli] {#login-via-aio-cli}
 
-Als u kwesties het programma openen aan [!DNL Adobe Developer Console] [ door de Adobe  [!DNL aio-cli] ](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) hebt, dan voeg manueel de geloofsbrieven toe die voor het ontwikkelen, het testen, en het opstellen van uw douanetoepassing worden vereist:
+Als u kwesties het programma openen aan [!DNL Adobe Developer Console] [ door Adobe  [!DNL aio-cli] ](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) hebt, dan voeg manueel de geloofsbrieven toe die voor het ontwikkelen, het testen, en het opstellen van uw douanetoepassing worden vereist:
 
-1. Navigeer aan uw project en werkruimte van Adobe Developer App Builder op [ Adobe Developer Console ](https://developer.adobe.com/console/user/servicesandapis) en druk **[!UICONTROL Download]** van de hoogste juiste hoek. Open dit bestand en sla deze JSON op een veilige plaats op uw computer op.
+1. Navigeer aan uw project en werkruimte van Adobe Developer App Builder op [ Adobe Developer Console ](https://developer.adobe.com/console/user/servicesandapis) en druk **[!UICONTROL Download]** van de hoger-juiste hoek. Open dit bestand en sla deze JSON op een veilige plaats op uw computer op.
 
 1. Navigeer naar het ENV-bestand in uw Adobe Developer App Builder-toepassing.
 
-1. Voeg de Adobe [!DNL I/O Runtime] referenties toe. Haal de Adobe [!DNL I/O Runtime] referenties op van de gedownloade JSON. De referenties zijn onder `project.workspace.services.runtime` . Voeg de [!DNL Adobe I/O] Runtime geloofsbrieven in de `AIO_runtime_XXX` variabelen toe:
+1. Voeg de Adobe [!DNL I/O Runtime] -referenties toe. Haal de Adobe [!DNL I/O Runtime] -gegevens op van de gedownloade JSON. De referenties zijn onder `project.workspace.services.runtime` . Voeg de [!DNL Adobe I/O] Runtime geloofsbrieven in de `AIO_runtime_XXX` variabelen toe:
 
    ```json
    AIO_runtime_auth=

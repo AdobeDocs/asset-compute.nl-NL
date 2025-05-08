@@ -1,5 +1,5 @@
 ---
-title: Contribute aan de open-broncomponenten van  [!DNL Asset Compute Service]
+title: Contribute voor de opensource-componenten van  [!DNL Asset Compute Service]
 description: Contribute aan de open-broncomponenten van  [!DNL Asset Compute Service].
 exl-id: 99a4b4d9-4709-4f8e-9f8c-96ba1783c4c3
 source-git-commit: f15b9819d3319d22deccdf7e39c0f72728baaa39
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Contribute {#contribute}
 
-[!DNL Asset Compute Service] de rekbaarheid wordt ontwikkeld onder een open ontwikkelingsmodel op [ github.com/adobe ](https://github.com/adobe). de Adobe is ingenomen met de bijdragen van de ontwikkelaars van extensies . Alle componenten relevant voor het ontwikkelen, bouwen, en het testen van douanetoepassingen zijn open bron. Enkele manieren waarop u kunt bijdragen zijn:
+[!DNL Asset Compute Service] de rekbaarheid wordt ontwikkeld onder een open ontwikkelingsmodel op [ github.com/adobe ](https://github.com/adobe). Adobe is verheugd over de bijdragen van de ontwikkelaars van extensies. Alle componenten relevant voor het ontwikkelen, bouwen, en het testen van douanetoepassingen zijn open bron. Enkele manieren waarop u kunt bijdragen zijn:
 
-* Delen koppelt terug: Creeer een GitHub kwestie in de aangewezen bewaarplaats, om insecten in product of documentatie te melden, om verhogingen te verzoeken, en om nieuwe eigenschappen te verzoeken. Weet u niet zeker welke opslagplaats moet worden gebruikt om uw uitgave te verzenden? Als zo, logboek een kwestie in de [ bewaarplaats van SDK van de Asset compute ](https://github.com/adobe/asset-compute-sdk) zodat het geschikt wordt verpletterd.
+* Delen koppelt terug: Creeer een GitHub kwestie in de aangewezen bewaarplaats, om insecten in product of documentatie te melden, om verhogingen te verzoeken, en om nieuwe eigenschappen te verzoeken. Weet u niet zeker welke opslagplaats moet worden gebruikt om uw uitgave te verzenden? Als zo, logboek een kwestie in de [ bewaarplaats van Asset Compute SDK ](https://github.com/adobe/asset-compute-sdk) zodat het geschikt wordt verpletterd.
 
 * Patch: als u een patch wilt leveren, gebruikt u de bestaande opslagplaats en dient u een pull-aanvraag in.
 

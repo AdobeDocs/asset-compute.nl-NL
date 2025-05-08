@@ -79,7 +79,7 @@ Voor deze bereiken moet het [!DNL Adobe Developer Console] -project zijn geabonn
 
 Elke cliënt van [!DNL Asset Compute service] - een uniek [!DNL Adobe Developer Console] project dat aan de dienst wordt ingetekend - moet [ registreren ](#register-request) alvorens verwerkingsverzoeken te maken. De registratiestap retourneert het unieke gebeurtenisjournaal dat vereist is om de asynchrone gebeurtenissen van de uitvoering op te halen.
 
-Aan het eind van zijn levenscyclus, kan een cliënt [ ](#unregister-request) unregister.
+Aan het eind van zijn levenscyclus, kan een cliënt [&#128279;](#unregister-request) unregister.
 
 ### Aanvraag registreren {#register-request}
 

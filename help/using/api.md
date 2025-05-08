@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!DNL Asset Compute Service] HTTP-API {#asset-compute-http-api}
 
-Het gebruik van de API is beperkt tot ontwikkelingsdoeleinden. De API wordt als context verstrekt wanneer het ontwikkelen van douanetoepassingen. [!DNL Adobe Experience Manager] als [!DNL Cloud Service] gebruikt de API om de verwerkingsgegevens door te geven aan een aangepaste toepassing. Voor meer informatie, zie [ de activamicrodiensten van het Gebruik en Profielen van de Verwerking ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
+Het gebruik van de API is beperkt tot ontwikkelingsdoeleinden. De API wordt als context verstrekt wanneer het ontwikkelen van douanetoepassingen. [!DNL Adobe Experience Manager] als [!DNL Cloud Service] gebruikt de API om de verwerkingsgegevens door te geven aan een aangepaste toepassing. Voor meer informatie, zie [ de activamicrodiensten van het Gebruik en Profielen van de Verwerking ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
 
 >[!NOTE]
 >
@@ -373,7 +373,7 @@ Hieronder vindt u de beschikbare opties voor de array `renditions` in [`/process
 
 | Naam | Type | Beschrijving | Voorbeeld |
 |-------------------|----------|-------------|---------|
-| `fmt` | `string` | De doelindeling van de uitvoeringen kan ook `text` zijn voor tekstextractie en `xmp` voor het extraheren van XMP-metagegevens als XML. Zie [ gesteunde formaten ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/file-format-support) | `png` |
+| `fmt` | `string` | De doelindeling van de uitvoeringen kan ook `text` zijn voor tekstextractie en `xmp` voor het extraheren van XMP-metagegevens als XML. Zie [ gesteunde formaten ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support) | `png` |
 | `worker` | `string` | URL van a [ douanetoepassing ](develop-custom-application.md). Moet een `https://` URL zijn. Als dit veld aanwezig is, maakt een aangepaste toepassing de vertoning. Een ander setveld voor uitvoering wordt vervolgens gebruikt in de aangepaste toepassing. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | De URL waarnaar de gegenereerde uitvoering moet worden geüpload met HTTP PUT. | `http://w.com/img.jpg` |
 | `target` | `object` | Vooraf ondertekende URL met meerdere delen uploadgegevens voor de gegenereerde uitvoering. Deze informatie is voor [ AEM/Oak Directe Binaire Upload ](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) met dit [ multipart uploadgedrag ](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br> Gebieden:<ul><li>`urls`: array van tekenreeksen, één voor elke vooraf ondertekende deel-URL</li><li>`minPartSize`: de minimale grootte die voor één onderdeel moet worden gebruikt = url</li><li>`maxPartSize`: de maximale grootte die voor één onderdeel kan worden gebruikt = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
@@ -381,7 +381,7 @@ Hieronder vindt u de beschikbare opties voor de array `renditions` in [`/process
 
 ### Vertoningsspecifieke velden {#rendition-specific-fields}
 
-Voor een lijst van momenteel gesteunde dossierformaten, zie [ gesteunde dossierformaten ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/file-format-support).
+Voor een lijst van momenteel gesteunde dossierformaten, zie [ gesteunde dossierformaten ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support).
 
 | Naam | Type | Beschrijving | Voorbeeld |
 |-------------------|----------|-------------|---------|

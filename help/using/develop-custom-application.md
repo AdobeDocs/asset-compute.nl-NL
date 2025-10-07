@@ -2,9 +2,9 @@
 title: Ontwikkelen voor  [!DNL Asset Compute Service]
 description: Creeer douanetoepassingen gebruikend  [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: db38b9dc27505aa7e04cf58a646005fc2e0e8782
+source-git-commit: 94fd8c0888185f64825046b7999655e9501a71fe
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Zorg ervoor om [ Adobe lucht-cli ](https://github.com/adobe/aio-cli) te hebben p
 
    Adobe raadt u aan zich eerst aan te melden. Als u kwesties hebt, dan volg de instructies [ om een app tot stand te brengen zonder het programma te openen ](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
-1. Nadat u zich hebt aangemeld, volgt u de aanwijzingen in de CLI en selecteert u de `Organization` , `Project` en `Workspace` die u voor de toepassing wilt gebruiken. Kies het project en de werkruimte die u creeerde toen u [ opstelling uw milieu ](setup-environment.md). Selecteer `DX Asset Compute Worker` bij de aanwijzing `Which extension point(s) do you wish to implement ?` :
+1. Nadat u zich hebt aangemeld, volgt u de aanwijzingen in de CLI en selecteert u de `Organization` , `Project` en `Workspace` die u voor de toepassing wilt gebruiken. Kies het project en de werkruimte die u creeerde toen u [ opstelling uw milieu ](setup-environment.md). Selecteer `Which extension point(s) do you wish to implement ?` bij de aanwijzing `DX Asset Compute Worker` :
 
    ```sh
    $ aio app init <app-name>
@@ -40,7 +40,7 @@ Zorg ervoor om [ Adobe lucht-cli ](https://github.com/adobe/aio-cli) te hebben p
    ◯ DX Asset Compute Worker
    ```
 
-1. Selecteer `Actions` wanneer dit wordt gevraagd bij `Which Adobe I/O App features do you want to enable for this project?` . Schakel de optie `Web Assets` uit als webelementen verschillende verificatie- en autorisatiecontroles gebruiken.
+1. Selecteer `Which Adobe I/O App features do you want to enable for this project?` wanneer dit wordt gevraagd bij `Actions` . Schakel de optie `Web Assets` uit als webelementen verschillende verificatie- en autorisatiecontroles gebruiken.
 
    ```bash
    ? Which Adobe I/O App features do you want to enable for this project?
@@ -51,7 +51,7 @@ Zorg ervoor om [ Adobe lucht-cli ](https://github.com/adobe/aio-cli) te hebben p
    ◯ CI/CD: Include GitHub Actions based workflows for Build, Test and Deploy
    ```
 
-1. Selecteer `Adobe Asset Compute Worker` bij de aanwijzing `Which type of sample actions do you want to create?` :
+1. Selecteer `Which type of sample actions do you want to create?` bij de aanwijzing `Adobe Asset Compute Worker` :
 
    ```bash
    ? Which type of sample actions do you want to create?
@@ -90,17 +90,17 @@ Zorg ervoor om toegang tot a [ gesteunde container van de wolkenopslag ](https:/
 #### Referenties toevoegen aan ENV-bestand {#add-credentials-env-file}
 
 Voeg de volgende gegevens voor het ontwikkelprogramma in het `.env` -bestand in. Het bestand bevindt zich in de hoofdmap van uw App Builder-project:
+<!--
+1. Add the absolute path to the private key file created while adding services to your App Builder Project:
 
-1. Voeg het absolute pad toe aan het gemaakte persoonlijke sleutelbestand terwijl u services toevoegt aan uw App Builder-project:
-
-   ```conf
-   ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
-   ```
+    ```conf
+    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
+    ```
 
    >[!NOTE]
    >
-   >JWT is afgekeurd en persoonlijke sleutel kan niet worden gedownload. Terwijl wij aan het bijwerken van de testhulpmiddelen werken, merk op dat de douanearbeiders die met OAuth worden gecreeerd kunnen worden opgesteld maar de apparaten niet zouden werken.
-
+   >JWT is deprecated and Private Key is not available for download. While we are working on updating the testing tools, note that custom workers created using OAuth can be deployed but devtools would not work.
+-->
 1. Download het bestand van de Adobe Developer Console. Ga naar de hoofdmap van het project en klik op Alles downloaden rechtsboven in het scherm. Het bestand wordt gedownload met `<namespace>-<workspace>.json` als bestandsnaam. Voer een van de volgende handelingen uit:
 
    * Wijzig de naam van het bestand in `console.json` en verplaats het in de hoofdmap van het project.

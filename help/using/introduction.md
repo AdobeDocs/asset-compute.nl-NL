@@ -15,17 +15,17 @@ ht-degree: 0%
 
 Ontwikkelaars hebben de mogelijkheid om aangepaste elementtoepassingen (ook wel aangepaste workers genoemd) in te sluiten voor het afhandelen van aangepaste gebruiksgevallen. De service werkt op de Adobe [!DNL I/O Runtime] . De functie kan worden uitgebreid met apps zonder kop die in Node.js zijn geschreven. [!DNL Adobe Developer App Builder] Ze kunnen aangepaste bewerkingen uitvoeren, zoals het aanroepen van externe API&#39;s om afbeeldingsbewerkingen uit te voeren of ondersteuning voor [!DNL Adobe Sensei] te benutten.
 
-[!DNL Adobe Developer App Builder] is een raamwerk voor het ontwikkelen en implementeren van aangepaste webtoepassingen op Adobe [!DNL I/O Runtime] voor het uitbreiden van Adobe Experience Cloud-oplossingen. Voor het maken van aangepaste toepassingen kunnen ontwikkelaars [!DNL React Spectrum] (Adobe UI-toolkit) gebruiken, microservices maken, aangepaste gebeurtenissen maken en API&#39;s ordenen. Zie [ documentatie van Adobe Developer App Builder ](https://developer.adobe.com/app-builder/docs/overview/).
+[!DNL Adobe Developer App Builder] is een raamwerk voor het ontwikkelen en implementeren van aangepaste webtoepassingen op Adobe [!DNL I/O Runtime] voor het uitbreiden van Adobe Experience Cloud-oplossingen. Voor het maken van aangepaste toepassingen kunnen ontwikkelaars [!DNL React Spectrum] (Adobe UI-toolkit) gebruiken, microservices maken, aangepaste gebeurtenissen maken en API&#39;s ordenen. Zie [&#x200B; documentatie van Adobe Developer App Builder &#x200B;](https://developer.adobe.com/app-builder/docs/overview/).
 
 >[!NOTE]
 >
->Momenteel kan [!DNL Asset Compute Service] alleen worden gebruikt via [!DNL Experience Manager] als een [!DNL Cloud Service] . Beheerders maken verwerkingsprofielen die de [!DNL Asset Compute Service] kunnen aanroepen om elementen door te geven voor verwerking. Zie [ gebruikend activa microservices en verwerkingsprofielen ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
+>Momenteel kan [!DNL Asset Compute Service] alleen worden gebruikt via [!DNL Experience Manager] als een [!DNL Cloud Service] . Beheerders maken verwerkingsprofielen die de [!DNL Asset Compute Service] kunnen aanroepen om elementen door te geven voor verwerking. Zie [&#x200B; gebruikend activa microservices en verwerkingsprofielen &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
 
 ## Ondersteund gebruik van [!DNL Asset Compute Service] {#possible-use-cases-benefits}
 
 [!DNL Asset Compute Service] biedt ondersteuning voor een aantal veelvoorkomende gevallen van bedrijfsgebruik, zoals eenvoudige beeldverwerking, specifieke conversies voor Adobe-toepassingen en het maken van aangepaste toepassingen die complexe zakelijke vereisten ordenen.
 
-U kunt de [!DNL Asset Compute] Webdienst gebruiken om duimnagels voor verschillende dossiertypes, beelden van hoge kwaliteit terug te geven voor de [ gesteunde dossierformaten ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support) te produceren. Zie [ gebruikte gevallen die via douaneconfiguratie ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use) worden gesteund.
+U kunt de [!DNL Asset Compute] Webdienst gebruiken om duimnagels voor verschillende dossiertypes, beelden van hoge kwaliteit terug te geven voor de [&#x200B; gesteunde dossierformaten &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support) te produceren. Zie [&#x200B; gebruikte gevallen die via douaneconfiguratie &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use) worden gesteund.
 
 >[!NOTE]
 >
@@ -44,9 +44,9 @@ U kunt de [!DNL Asset Compute] Webdienst gebruiken om duimnagels voor verschille
 
 >[!MORELIKETHIS]
 >
->* [ Overzicht van activa verwerking met activa microservices in  [!DNL Adobe Experience Manager]  als a  [!DNL Cloud Service] ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview).
->* [ Documentatie van Adobe Developer App Builder ](https://developer.adobe.com/app-builder/docs/overview).
->* [ Gesteunde dossierformaten voor verwerking ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support).
+>* [&#x200B; Overzicht van activa verwerking met activa microservices in  [!DNL Adobe Experience Manager]  als a  [!DNL Cloud Service] &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview).
+>* [&#x200B; Documentatie van Adobe Developer App Builder &#x200B;](https://developer.adobe.com/app-builder/docs/overview).
+>* [&#x200B; Gesteunde dossierformaten voor verwerking &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support).
 
 <!-- **TBD:**
 * Clarify the service can only be used within AEM as Cloud Service. The docs provided as context for custom application developers. Not to be used as a standalone service.

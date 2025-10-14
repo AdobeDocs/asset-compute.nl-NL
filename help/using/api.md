@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!DNL Asset Compute Service] HTTP-API {#asset-compute-http-api}
 
-Het gebruik van de API is beperkt tot ontwikkelingsdoeleinden. De API wordt als context verstrekt wanneer het ontwikkelen van douanetoepassingen. [!DNL Adobe Experience Manager] als [!DNL Cloud Service] gebruikt de API om de verwerkingsgegevens door te geven aan een aangepaste toepassing. Voor meer informatie, zie [ de activamicrodiensten van het Gebruik en Profielen van de Verwerking ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
+Het gebruik van de API is beperkt tot ontwikkelingsdoeleinden. De API wordt als context verstrekt wanneer het ontwikkelen van douanetoepassingen. [!DNL Adobe Experience Manager] als [!DNL Cloud Service] gebruikt de API om de verwerkingsgegevens door te geven aan een aangepaste toepassing. Voor meer informatie, zie [&#x200B; de activamicrodiensten van het Gebruik en Profielen van de Verwerking &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
 
 >[!NOTE]
 >
@@ -21,21 +21,21 @@ Elke client van de [!DNL Asset Compute Service] HTTP API moet deze flow op hoog 
 
 1. Een client wordt ingericht als een [!DNL Adobe Developer Console] -project in een IMS-organisatie. Elke afzonderlijke client (systeem of omgeving) vereist een eigen afzonderlijk project om de gegevensstroom van de gebeurtenis te scheiden.
 
-1. Een cliënt produceert een toegangstoken voor de technische rekening gebruikend [ JWT (de Rekening van de Dienst) Authentificatie ](https://developer.adobe.com/developer-console/docs/guides/).
+1. Een cliënt produceert een toegangstoken voor de technische rekening gebruikend [&#x200B; JWT (de Rekening van de Dienst) Authentificatie &#x200B;](https://developer.adobe.com/developer-console/docs/guides/).
 
 1. Een client roept [`/register`](#register) slechts eenmaal aan om de journaal-URL op te halen.
 
 1. Een client roept [`/process`](#process-request) aan voor elk element waarvoor de client uitvoeringen wil genereren. De vraag is asynchroon.
 
-1. Een cliënt pollt regelmatig het dagboek om [ gebeurtenissen ](#asynchronous-events) te ontvangen. Het ontvangt gebeurtenissen voor elke gevraagde vertoning wanneer de vertoning met succes wordt verwerkt (`rendition_created` gebeurtenistype) of als er een fout (`rendition_failed` gebeurtenistype) is.
+1. Een cliënt pollt regelmatig het dagboek om [&#x200B; gebeurtenissen &#x200B;](#asynchronous-events) te ontvangen. Het ontvangt gebeurtenissen voor elke gevraagde vertoning wanneer de vertoning met succes wordt verwerkt (`rendition_created` gebeurtenistype) of als er een fout (`rendition_failed` gebeurtenistype) is.
 
-De [ adobe-asset-compute-cliënt ](https://github.com/adobe/asset-compute-client) module maakt het gemakkelijk om API in code Node.js te gebruiken.
+De [&#x200B; adobe-asset-compute-cliënt &#x200B;](https://github.com/adobe/asset-compute-client) module maakt het gemakkelijk om API in code Node.js te gebruiken.
 
 ## Verificatie en autorisatie {#authentication-and-authorization}
 
 Voor alle API&#39;s is verificatie van toegangstoken vereist. De verzoeken moeten de volgende kopballen plaatsen:
 
-1. `Authorization` kopbal met dragerteken, dat het technische rekeningsteken is, dat via [ JWT uitwisseling ](https://developer.adobe.com/developer-console/docs/guides/) van het project van Adobe Developer Console wordt ontvangen. Het [ werkingsgebied ](#scopes) wordt hieronder gedocumenteerd.
+1. `Authorization` kopbal met dragerteken, dat het technische rekeningsteken is, dat via [&#x200B; JWT uitwisseling &#x200B;](https://developer.adobe.com/developer-console/docs/guides/) van het project van Adobe Developer Console wordt ontvangen. Het [&#x200B; werkingsgebied &#x200B;](#scopes) wordt hieronder gedocumenteerd.
 
 <!-- TBD: Change the existing URL to a new path when a new path for docs is available. The current path contains master word that is not an inclusive term. Logged ticket in Adobe I/O's GitHub repo to get a new URL.
 -->
@@ -77,7 +77,7 @@ Voor deze bereiken moet het [!DNL Adobe Developer Console] -project zijn geabonn
 
 ## Registratie {#register}
 
-Elke cliënt van [!DNL Asset Compute service] - een uniek [!DNL Adobe Developer Console] project dat aan de dienst wordt ingetekend - moet [ registreren ](#register-request) alvorens verwerkingsverzoeken te maken. De registratiestap retourneert het unieke gebeurtenisjournaal dat vereist is om de asynchrone gebeurtenissen van de uitvoering op te halen.
+Elke cliënt van [!DNL Asset Compute service] - een uniek [!DNL Adobe Developer Console] project dat aan de dienst wordt ingetekend - moet [&#x200B; registreren &#x200B;](#register-request) alvorens verwerkingsverzoeken te maken. De registratiestap retourneert het unieke gebeurtenisjournaal dat vereist is om de asynchrone gebeurtenissen van de uitvoering op te halen.
 
 Aan het eind van zijn levenscyclus, kan een cliënt [&#128279;](#unregister-request) unregister.
 
@@ -89,7 +89,7 @@ Met deze API-aanroep wordt een [!DNL Asset Compute] -client ingesteld en wordt d
 |--------------------------|------------------------------------------------------|
 | Methode | `POST` |
 | Pad | `/register` |
-| Koptekst `Authorization` | Alle [ toestemmings verwante kopballen ](#authentication-and-authorization). |
+| Koptekst `Authorization` | Alle [&#x200B; toestemmings verwante kopballen &#x200B;](#authentication-and-authorization). |
 | Koptekst `x-request-id` | Optioneel, door clients ingesteld voor een unieke end-to-end-id van de verwerkingsverzoeken in alle systemen. |
 | Aanvragingsinstantie | Moet leeg zijn. |
 
@@ -113,11 +113,11 @@ De HTTP-statuscodes zijn:
   }
   ```
 
-* **401 Onbevoegd**: komt voor wanneer het verzoek geen geldige [ authentificatie ](#authentication-and-authorization) heeft. Een voorbeeld kan een ongeldige toegangstoken of een ongeldige API-sleutel zijn.
+* **401 Onbevoegd**: komt voor wanneer het verzoek geen geldige [&#x200B; authentificatie &#x200B;](#authentication-and-authorization) heeft. Een voorbeeld kan een ongeldige toegangstoken of een ongeldige API-sleutel zijn.
 
-* **403 Verboden**: komt voor wanneer het verzoek geen geldige [ vergunning ](#authentication-and-authorization) heeft. Een voorbeeld zou een geldig toegangstoken kunnen zijn, maar het Adobe Developer Console project (technische rekening) wordt niet ingetekend aan alle vereiste diensten.
+* **403 Verboden**: komt voor wanneer het verzoek geen geldige [&#x200B; vergunning &#x200B;](#authentication-and-authorization) heeft. Een voorbeeld zou een geldig toegangstoken kunnen zijn, maar het Adobe Developer Console project (technische rekening) wordt niet ingetekend aan alle vereiste diensten.
 
-* **429 Te veel verzoeken**: komt voor wanneer deze cliënt of anders het systeem overlaadt. De cliënten zouden met een [ exponentiële backoff ](https://en.wikipedia.org/wiki/Exponential_backoff) opnieuw moeten proberen. Het lichaam is leeg.
+* **429 Te veel verzoeken**: komt voor wanneer deze cliënt of anders het systeem overlaadt. De cliënten zouden met een [&#x200B; exponentiële backoff &#x200B;](https://en.wikipedia.org/wiki/Exponential_backoff) opnieuw moeten proberen. Het lichaam is leeg.
 * **4xx fout**: Wanneer er een andere cliëntfout en registratie ontbrak. Gewoonlijk wordt een JSON-reactie als deze geretourneerd, hoewel dat niet voor alle fouten wordt gegarandeerd:
 
   ```json
@@ -146,7 +146,7 @@ Met deze API-aanroep wordt de registratie van een [!DNL Asset Compute] -client o
 |--------------------------|------------------------------------------------------|
 | Methode | `POST` |
 | Pad | `/unregister` |
-| Koptekst `Authorization` | Alle [ toestemmings verwante kopballen ](#authentication-and-authorization). |
+| Koptekst `Authorization` | Alle [&#x200B; toestemmings verwante kopballen &#x200B;](#authentication-and-authorization). |
 | Koptekst `x-request-id` | Optioneel. Clients kunnen deze instellen voor een unieke end-to-end-id van de verwerkingsverzoeken in verschillende systemen. |
 | Aanvragingsinstantie | Leeg. |
 
@@ -169,9 +169,9 @@ De statuscodes zijn:
   }
   ```
 
-* **401 Onbevoegd**: komt voor wanneer het verzoek geen geldige [ authentificatie ](#authentication-and-authorization) heeft. Een voorbeeld kan een ongeldige toegangstoken of een ongeldige API-sleutel zijn.
+* **401 Onbevoegd**: komt voor wanneer het verzoek geen geldige [&#x200B; authentificatie &#x200B;](#authentication-and-authorization) heeft. Een voorbeeld kan een ongeldige toegangstoken of een ongeldige API-sleutel zijn.
 
-* **403 Verboden**: komt voor wanneer het verzoek geen geldige [ vergunning ](#authentication-and-authorization) heeft. Een voorbeeld zou een geldig toegangstoken kunnen zijn, maar het Adobe Developer Console project (technische rekening) wordt niet ingetekend aan alle vereiste diensten.
+* **403 Verboden**: komt voor wanneer het verzoek geen geldige [&#x200B; vergunning &#x200B;](#authentication-and-authorization) heeft. Een voorbeeld zou een geldig toegangstoken kunnen zijn, maar het Adobe Developer Console project (technische rekening) wordt niet ingetekend aan alle vereiste diensten.
 
 * **404 niet gevonden**: Deze status verschijnt wanneer de verstrekte geloofsbrieven niet geregistreerd of ongeldig zijn.
 
@@ -182,7 +182,7 @@ De statuscodes zijn:
   }
   ```
 
-* **429 Te veel verzoeken**: komt voor wanneer het systeem wordt overbelast. De cliënten zouden met een [ exponentiële backoff ](https://en.wikipedia.org/wiki/Exponential_backoff) opnieuw moeten proberen. Het lichaam is leeg.
+* **429 Te veel verzoeken**: komt voor wanneer het systeem wordt overbelast. De cliënten zouden met een [&#x200B; exponentiële backoff &#x200B;](https://en.wikipedia.org/wiki/Exponential_backoff) opnieuw moeten proberen. Het lichaam is leeg.
 
 * **4xx fout**: komt voor wanneer er een andere cliëntfout was en unregister ontbrak. Gewoonlijk wordt een JSON-reactie als deze geretourneerd, hoewel dat niet voor alle fouten wordt gegarandeerd:
 
@@ -215,7 +215,7 @@ Er wordt verwezen naar binaire getallen via URL&#39;s, zoals vooraf ondertekende
 | Methode | `POST` |
 | Pad | `/process` |
 | MIME-type | `application/json` |
-| Koptekst `Authorization` | Alle [ toestemmings verwante kopballen ](#authentication-and-authorization). |
+| Koptekst `Authorization` | Alle [&#x200B; toestemmings verwante kopballen &#x200B;](#authentication-and-authorization). |
 | Koptekst `x-request-id` | Optioneel. Clients kunnen een unieke end-to-end-id instellen om verwerkingsverzoeken in verschillende systemen bij te houden. |
 | Aanvragingsinstantie | Deze moet de JSON-indeling van het procesverzoek hebben, zoals hieronder wordt beschreven. Er worden instructies gegeven over welk element moet worden verwerkt en welke uitvoeringen moeten worden gegenereerd. |
 
@@ -235,8 +235,8 @@ De beschikbare velden zijn:
 | Naam | Type | Beschrijving | Voorbeeld |
 |--------------|----------|-------------|---------|
 | `source` | `string` | URL van het bronelement dat wordt verwerkt. Optioneel, op basis van de gevraagde renditie-indeling (bijvoorbeeld `fmt=zip`). | `"http://example.com/image.jpg"` |
-| `source` | `object` | Beschrijf het bronelement dat wordt verwerkt. Zie beschrijving van [ de objecten van Source gebieden ](#source-object-fields) hieronder. Optioneel op basis van de gevraagde renditie-indeling (bijvoorbeeld `fmt=zip`). | `{"url": "http://example.com/image.jpg", "mimeType": "image/jpeg" }` |
-| `renditions` | `array` | Uitvoeringen die moeten worden gegenereerd op basis van het bronbestand. Elk vertoningsvoorwerp steunt a [ vertoningsinstructie ](#rendition-instructions). Vereist. | `[{ "target": "https://....", "fmt": "png" }]` |
+| `source` | `object` | Beschrijf het bronelement dat wordt verwerkt. Zie beschrijving van [&#x200B; de objecten van Source gebieden &#x200B;](#source-object-fields) hieronder. Optioneel op basis van de gevraagde renditie-indeling (bijvoorbeeld `fmt=zip`). | `{"url": "http://example.com/image.jpg", "mimeType": "image/jpeg" }` |
+| `renditions` | `array` | Uitvoeringen die moeten worden gegenereerd op basis van het bronbestand. Elk vertoningsvoorwerp steunt a [&#x200B; vertoningsinstructie &#x200B;](#rendition-instructions). Vereist. | `[{ "target": "https://....", "fmt": "png" }]` |
 
 De `source` kan een `<string>` zijn die als een URL wordt gezien of een `<object>` met een extra veld. De volgende varianten zijn vergelijkbaar:
 
@@ -319,9 +319,9 @@ Statuscodes:
   }
   ```
 
-* **401 onbevoegd**: Wanneer het verzoek geen geldige [ authentificatie ](#authentication-and-authorization) heeft. Een voorbeeld kan een ongeldige toegangstoken of een ongeldige API-sleutel zijn.
-* **403 Verboden**: Wanneer het verzoek geen geldige [ vergunning ](#authentication-and-authorization) heeft. Een voorbeeld zou een geldig toegangstoken kunnen zijn, maar het Adobe Developer Console project (technische rekening) wordt niet ingetekend aan alle vereiste diensten.
-* **429 Te veel verzoeken**: komt voor wanneer het systeem, of toe te schrijven aan deze bepaalde cliënt of van algemene vraag wordt overweldigd. De cliënten kunnen met een [ exponentiële backoff ](https://en.wikipedia.org/wiki/Exponential_backoff) opnieuw proberen. Het lichaam is leeg.
+* **401 onbevoegd**: Wanneer het verzoek geen geldige [&#x200B; authentificatie &#x200B;](#authentication-and-authorization) heeft. Een voorbeeld kan een ongeldige toegangstoken of een ongeldige API-sleutel zijn.
+* **403 Verboden**: Wanneer het verzoek geen geldige [&#x200B; vergunning &#x200B;](#authentication-and-authorization) heeft. Een voorbeeld zou een geldig toegangstoken kunnen zijn, maar het Adobe Developer Console project (technische rekening) wordt niet ingetekend aan alle vereiste diensten.
+* **429 Te veel verzoeken**: komt voor wanneer het systeem, of toe te schrijven aan deze bepaalde cliënt of van algemene vraag wordt overweldigd. De cliënten kunnen met een [&#x200B; exponentiële backoff &#x200B;](https://en.wikipedia.org/wiki/Exponential_backoff) opnieuw proberen. Het lichaam is leeg.
 * **4xx fout**: Wanneer er een andere cliëntfout was. Gewoonlijk wordt een JSON-reactie als deze geretourneerd, hoewel dat niet voor alle fouten wordt gegarandeerd:
 
   ```json
@@ -342,13 +342,13 @@ Statuscodes:
   }
   ```
 
-De meeste cliënten zijn waarschijnlijk geneigd om het zelfde verzoek met [ exponentiële backoff ](https://en.wikipedia.org/wiki/Exponential_backoff) op om het even welke fout *behalve* configuratiekwesties zoals 401 of 403, of ongeldige verzoeken zoals 400 opnieuw te proberen. Afgezien van de reguliere tariefbeperking door middel van 429 reacties, kan een uitval of beperking van een tijdelijke dienst leiden tot 5xx fouten. Het zou dan raadzaam zijn om na een bepaalde periode opnieuw te proberen.
+De meeste cliënten zijn waarschijnlijk geneigd om het zelfde verzoek met [&#x200B; exponentiële backoff &#x200B;](https://en.wikipedia.org/wiki/Exponential_backoff) op om het even welke fout *behalve* configuratiekwesties zoals 401 of 403, of ongeldige verzoeken zoals 400 opnieuw te proberen. Afgezien van de reguliere tariefbeperking door middel van 429 reacties, kan een uitval of beperking van een tijdelijke dienst leiden tot 5xx fouten. Het zou dan raadzaam zijn om na een bepaalde periode opnieuw te proberen.
 
 Alle JSON-reacties (indien aanwezig) bevatten `requestId` . Dit is dezelfde waarde als de `X-Request-Id` -header. Adobe raadt aan de koptekst te lezen omdat deze altijd aanwezig is. `requestId` wordt ook geretourneerd in alle gebeurtenissen die betrekking hebben op het verwerken van aanvragen als `requestId` . Clients mogen geen aanname maken over de opmaak van deze tekenreeks. Dit is een ondoorzichtige tekenreeks-id.
 
 ## Aanmelden bij nabewerking {#opt-in-to-post-processing}
 
-De [ SDK van Asset Compute ](https://github.com/adobe/asset-compute-sdk) steunt een reeks basisbeeld naverwerkingsopties. Aangepaste workers kunnen zich expliciet aanmelden bij nabewerking door het veld `postProcess` voor het weergaveobject in te stellen op `true` .
+De [&#x200B; SDK van Asset Compute &#x200B;](https://github.com/adobe/asset-compute-sdk) steunt een reeks basisbeeld naverwerkingsopties. Aangepaste workers kunnen zich expliciet aanmelden bij nabewerking door het veld `postProcess` voor het weergaveobject in te stellen op `true` .
 
 De ondersteunde gebruiksgevallen zijn:
 
@@ -361,9 +361,9 @@ De ondersteunde gebruiksgevallen zijn:
 
 ## Watermerkelementen {#add-watermark}
 
-De [ SDK van Asset Compute ](https://github.com/adobe/asset-compute-sdk) steunt het toevoegen van een watermerk aan PNG, JPEG, TIFF, en de beelddossiers van GIF. Het watermerk wordt toegevoegd na de vertoningsinstructies in het `watermark` -object op de vertoning.
+De [&#x200B; SDK van Asset Compute &#x200B;](https://github.com/adobe/asset-compute-sdk) steunt het toevoegen van een watermerk aan PNG, JPEG, TIFF, en de beelddossiers van GIF. Het watermerk wordt toegevoegd na de vertoningsinstructies in het `watermark` -object op de vertoning.
 
-Watermerken worden uitgevoerd tijdens de nabewerking van de vertoning. Om activa van het watermerk te voorzien, opteert de douanearbeider [ in post-verwerking ](#opt-in-to-post-processing) door het gebied `postProcess` op het vertoningsvoorwerp aan `true` te plaatsen. Als de worker niet meedoet, wordt er geen watermerken toegepast, zelfs niet als het watermerkobject is ingesteld op het weergaveobject in de aanvraag.
+Watermerken worden uitgevoerd tijdens de nabewerking van de vertoning. Om activa van het watermerk te voorzien, opteert de douanearbeider [&#x200B; in post-verwerking &#x200B;](#opt-in-to-post-processing) door het gebied `postProcess` op het vertoningsvoorwerp aan `true` te plaatsen. Als de worker niet meedoet, wordt er geen watermerken toegepast, zelfs niet als het watermerkobject is ingesteld op het weergaveobject in de aanvraag.
 
 ## Vertoningsinstructies {#rendition-instructions}
 
@@ -373,19 +373,19 @@ Hieronder vindt u de beschikbare opties voor de array `renditions` in [`/process
 
 | Naam | Type | Beschrijving | Voorbeeld |
 |-------------------|----------|-------------|---------|
-| `fmt` | `string` | De doelindeling van de uitvoeringen kan ook `text` zijn voor tekstextractie en `xmp` voor het extraheren van XMP-metagegevens als XML. Zie [ gesteunde formaten ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support) | `png` |
-| `worker` | `string` | URL van a [ douanetoepassing ](develop-custom-application.md). Moet een `https://` URL zijn. Als dit veld aanwezig is, maakt een aangepaste toepassing de vertoning. Een ander setveld voor uitvoering wordt vervolgens gebruikt in de aangepaste toepassing. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
+| `fmt` | `string` | De doelindeling van de uitvoeringen kan ook `text` zijn voor tekstextractie en `xmp` voor het extraheren van XMP-metagegevens als XML. Zie [&#x200B; gesteunde formaten &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support) | `png` |
+| `worker` | `string` | URL van a [&#x200B; douanetoepassing &#x200B;](develop-custom-application.md). Moet een `https://` URL zijn. Als dit veld aanwezig is, maakt een aangepaste toepassing de vertoning. Een ander setveld voor uitvoering wordt vervolgens gebruikt in de aangepaste toepassing. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | De URL waarnaar de gegenereerde uitvoering moet worden geüpload met HTTP PUT. | `http://w.com/img.jpg` |
-| `target` | `object` | Vooraf ondertekende URL met meerdere delen uploadgegevens voor de gegenereerde uitvoering. Deze informatie is voor [ AEM/Oak Directe Binaire Upload ](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) met dit [ multipart uploadgedrag ](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br> Gebieden:<ul><li>`urls`: array van tekenreeksen, één voor elke vooraf ondertekende deel-URL</li><li>`minPartSize`: de minimale grootte die voor één onderdeel moet worden gebruikt = url</li><li>`maxPartSize`: de maximale grootte die voor één onderdeel kan worden gebruikt = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
+| `target` | `object` | Vooraf ondertekende URL met meerdere delen uploadgegevens voor de gegenereerde uitvoering. Deze informatie is voor [&#x200B; AEM/Oak Directe Binaire Upload &#x200B;](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) met dit [&#x200B; multipart uploadgedrag &#x200B;](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br> Gebieden:<ul><li>`urls`: array van tekenreeksen, één voor elke vooraf ondertekende deel-URL</li><li>`minPartSize`: de minimale grootte die voor één onderdeel moet worden gebruikt = url</li><li>`maxPartSize`: de maximale grootte die voor één onderdeel kan worden gebruikt = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
 | `userData` | `object` | Optioneel. De client bestuurt de gereserveerde ruimte en geeft deze door zoals bij weergavegebeurtenissen. Hiermee kan een client aangepaste informatie toevoegen om uitvoeringsgebeurtenissen te identificeren. Het mag niet worden gewijzigd of vertrouwd op in douanetoepassingen, aangezien de cliënten vrij zijn om het op elk ogenblik te veranderen. | `{ ... }` |
 
 ### Vertoningsspecifieke velden {#rendition-specific-fields}
 
-Voor een lijst van momenteel gesteunde dossierformaten, zie [ gesteunde dossierformaten ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support).
+Voor een lijst van momenteel gesteunde dossierformaten, zie [&#x200B; gesteunde dossierformaten &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/file-format-support).
 
 | Naam | Type | Beschrijving | Voorbeeld |
 |-------------------|----------|-------------|---------|
-| `*` | `*` | Geavanceerd, kunnen de douanevelden worden toegevoegd dat a [ douanetoepassing ](develop-custom-application.md) begrijpt. | |
+| `*` | `*` | Geavanceerd, kunnen de douanevelden worden toegevoegd dat a [&#x200B; douanetoepassing &#x200B;](develop-custom-application.md) begrijpt. | |
 | `embedBinaryLimit` | `number` in bytes | Wanneer de bestandsgrootte van de vertoning kleiner is dan de opgegeven waarde, wordt deze opgenomen in de gebeurtenis die wordt verzonden nadat het maken is voltooid. De maximaal toegestane grootte voor insluiten is 32 kB (32 x 1024 bytes). Als een vertoning groter is dan de limiet van `embedBinaryLimit` , wordt deze geplaatst op een locatie in de cloudopslag en wordt deze niet ingesloten in de gebeurtenis. | `3276` |
 | `width` | `number` | Breedte in pixels. alleen voor afbeeldingsuitvoeringen. | `200` |
 | `height` | `number` | Hoogte in pixels. alleen voor afbeeldingsuitvoeringen. | `200` |
@@ -398,7 +398,7 @@ Voor een lijst van momenteel gesteunde dossierformaten, zie [ gesteunde dossierf
 | `convertToDpi` | `number` of `object` | x- en y-DPI-waarden opnieuw samplen terwijl de fysieke grootte behouden blijft. Voor de eenvoud kan de waarde ook op één getal worden ingesteld, dat voor zowel x als y wordt gebruikt. | `96` of `{ xdpi: 96, ydpi: 96 }` |
 | `files` | `array` | Lijst met bestanden die moeten worden opgenomen in het ZIP-archief (`fmt=zip`). Elk item kan een URL-tekenreeks zijn of een object met de velden:<ul><li>`url`: URL om bestand te downloaden</li><li>`path`: Sla het bestand onder dit pad op in het ZIP-bestand</li></ul> | `[{ "url": "https://host/asset.jpg", "path": "folder/location/asset.jpg" }]` |
 | `duplicate` | `string` | Dubbele verwerking voor ZIP-archieven (`fmt=zip`). Standaard wordt een fout gegenereerd bij meerdere bestanden die in het ZIP-bestand onder hetzelfde pad zijn opgeslagen. Als u `duplicate` instelt op `ignore` , wordt alleen het eerste element opgeslagen en de rest genegeerd. | `ignore` |
-| `watermark` | `object` | Bevat instructies over het [ watermerk ](#watermark-specific-fields). |  |
+| `watermark` | `object` | Bevat instructies over het [&#x200B; watermerk &#x200B;](#watermark-specific-fields). |  |
 
 ### Watermerkspecifieke velden {#watermark-specific-fields}
 
@@ -426,13 +426,13 @@ Het Adobe [!DNL `I/O Events`] -type voor alle gebeurtenissen van de lus [!DNL As
 
 | Kenmerk | Type | Gebeurtenis | Beschrijving |
 |-------------|----------|---------------|-------------|
-| `date` | `string` | `*` | Tijdstempel toen de gebeurtenis in vereenvoudigd uitgebreid [ wordt verzonden ISO-8601 ](https://en.wikipedia.org/wiki/ISO_8601) formaat, zoals die door JavaScript [ wordt bepaald Date.toISOString () ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString). |
+| `date` | `string` | `*` | Tijdstempel toen de gebeurtenis in vereenvoudigd uitgebreid [&#x200B; wordt verzonden ISO-8601 &#x200B;](https://en.wikipedia.org/wiki/ISO_8601) formaat, zoals die door JavaScript [&#x200B; wordt bepaald Date.toISOString () &#x200B;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString). |
 | `requestId` | `string` | `*` | De aanvraag-id van de oorspronkelijke aanvraag naar `/process` , gelijk aan `X-Request-Id` header. |
 | `source` | `object` | `*` | De `source` van de `/process` request. |
 | `userData` | `object` | `*` | De `userData` van de vertoning van de `/process` request indien ingesteld. |
 | `rendition` | `object` | `rendition_*` | Het overeenkomende weergaveobject dat wordt doorgegeven in `/process` . |
-| `metadata` | `object` | `rendition_created` | De [ meta-gegevens ](#metadata) eigenschappen van de vertoning. |
-| `errorReason` | `string` | `rendition_failed` | De mislukking van de vertoning [ reden ](#error-reasons) als om het even welk. |
+| `metadata` | `object` | `rendition_created` | De [&#x200B; meta-gegevens &#x200B;](#metadata) eigenschappen van de vertoning. |
+| `errorReason` | `string` | `rendition_failed` | De mislukking van de vertoning [&#x200B; reden &#x200B;](#error-reasons) als om het even welk. |
 | `errorMessage` | `string` | `rendition_failed` | De tekst die meer details geeft over de eventuele uitvoerfout. |
 
 ### Metagegevens {#metadata}

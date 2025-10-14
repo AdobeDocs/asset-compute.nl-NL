@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Eenheidstests voor een aangepaste toepassing uitvoeren {#test-custom-worker}
 
-Installeer [ de Desktop van de Dokker ](https://www.docker.com/get-started) op uw machine. Als u een aangepaste worker wilt testen, voert u de volgende opdracht uit in de hoofdmap van de toepassing:
+Installeer [&#x200B; de Desktop van de Dokker &#x200B;](https://www.docker.com/get-started) op uw machine. Als u een aangepaste worker wilt testen, voert u de volgende opdracht uit in de hoofdmap van de toepassing:
 
 ```bash
 $ aio app test
@@ -62,7 +62,7 @@ test/
             mock-console.adobe.io.json
 ```
 
-Heb een blik bij [ de toepassingen van de voorbeelddouane ](https://github.com/adobe/asset-compute-example-workers/) voor sommige voorbeelden. Hieronder vindt u een gedetailleerde referentie.
+Heb een blik bij [&#x200B; de toepassingen van de voorbeelddouane &#x200B;](https://github.com/adobe/asset-compute-example-workers/) voor sommige voorbeelden. Hieronder vindt u een gedetailleerde referentie.
 
 ### Uitvoer testen {#test-output}
 
@@ -84,7 +84,7 @@ test/
         mock-<HOST_NAME2>.json
 ```
 
-Het mock-bestand is een http-reactie met JSON-indeling. Voor meer informatie, zie [ deze documentatie ](https://www.mock-server.com/mock_server/creating_expectations.html). Als er meerdere hostnamen zijn om te controleren, definieert u meerdere `mock-<mocked-host>.json` -bestanden. Hieronder ziet u een voorbeeldmodelbestand voor `google.com` genaamd `mock-google.com.json` :
+Het mock-bestand is een http-reactie met JSON-indeling. Voor meer informatie, zie [&#x200B; deze documentatie &#x200B;](https://www.mock-server.com/mock_server/creating_expectations.html). Als er meerdere hostnamen zijn om te controleren, definieert u meerdere `mock-<mocked-host>.json` -bestanden. Hieronder ziet u een voorbeeldmodelbestand voor `google.com` genaamd `mock-google.com.json` :
 
 ```json
 [{
@@ -101,7 +101,7 @@ Het mock-bestand is een http-reactie met JSON-indeling. Voor meer informatie, zi
 }]
 ```
 
-Het voorbeeld `worker-animal-pictures` bevat a [ mock dossier ](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/test/asset-compute/worker-animal-pictures/simple-test/mock-upload.wikimedia.org.json) voor de dienst Wikimedia die het met interactie aangaat.
+Het voorbeeld `worker-animal-pictures` bevat a [&#x200B; mock dossier &#x200B;](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/test/asset-compute/worker-animal-pictures/simple-test/mock-upload.wikimedia.org.json) voor de dienst Wikimedia die het met interactie aangaat.
 
 #### Bestanden delen over testgevallen {#share-files-across-test-cases}
 
@@ -158,22 +158,22 @@ Parameterbestand met reden van fout:
 }
 ```
 
-Zie een volledige lijst en een beschrijving van [ de foutenredenen van Asset Compute ](https://github.com/adobe/asset-compute-commons#error-reasons).
+Zie een volledige lijst en een beschrijving van [&#x200B; de foutenredenen van Asset Compute &#x200B;](https://github.com/adobe/asset-compute-commons#error-reasons).
 
 ## Fouten opsporen in een aangepaste toepassing {#debug-custom-worker}
 
 De volgende stappen tonen hoe u uw douanetoepassing kunt zuiveren gebruikend de Code van Visual Studio. Het staat voor het zien van levende logboeken, raakbreekpunten en stap door code evenals het levende opnieuw laden van lokale codeveranderingen na elke activering toe.
 
-Veel van deze stappen worden automatisch uitgevoerd door de functie `aio` out-of-the-box. Ga naar de sectie die de Toepassing in de [ documentatie van Adobe Developer App Builder ](https://developer.adobe.com/app-builder/docs/getting_started/first_app) zuiveren. Tot nu toe bevatten de onderstaande stappen een tijdelijke oplossing.
+Veel van deze stappen worden automatisch uitgevoerd door de functie `aio` out-of-the-box. Ga naar de sectie die de Toepassing in de [&#x200B; documentatie van Adobe Developer App Builder &#x200B;](https://developer.adobe.com/app-builder/docs/getting_started/first_app) zuiveren. Tot nu toe bevatten de onderstaande stappen een tijdelijke oplossing.
 
-1. Installeer recentste [ wskdebug ](https://github.com/apache/openwhisk-wskdebug) van GitHub en facultatieve [ ingrok ](https://www.npmjs.com/package/ngrok).
+1. Installeer recentste [&#x200B; wskdebug &#x200B;](https://github.com/apache/openwhisk-wskdebug) van GitHub en facultatieve [&#x200B; ingrok &#x200B;](https://www.npmjs.com/package/ngrok).
 
    ```shell
    npm install -g @openwhisk/wskdebug
    npm install -g ngrok --unsafe-perm=true
    ```
 
-1. Voeg in het JSON-bestand aanvullende instellingen toe aan uw gebruikersinstellingen. Het houdt het gebruiken van oude debugger van de Code van Visual Studio. Nieuwe heeft [ sommige kwesties ](https://github.com/apache/openwhisk-wskdebug/issues/74) met wskdebug: `"debug.javascript.usePreview": false`.
+1. Voeg in het JSON-bestand aanvullende instellingen toe aan uw gebruikersinstellingen. Het houdt het gebruiken van oude debugger van de Code van Visual Studio. Nieuwe heeft [&#x200B; sommige kwesties &#x200B;](https://github.com/apache/openwhisk-wskdebug/issues/74) met wskdebug: `"debug.javascript.usePreview": false`.
 1. Sluit alle instanties van apps die via `aio app run` zijn geopend.
 1. De nieuwste code implementeren met `aio app deploy` .
 1. Voer alleen Asset Compute Devtool uit met `aio asset-compute devtool` . Houd het open.

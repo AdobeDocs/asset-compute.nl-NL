@@ -30,6 +30,6 @@ ht-degree: 3%
    + [Een aangepaste toepassing ontwikkelen](develop-custom-application.md)
    + [Een aangepaste toepassing testen](test-custom-application.md)
    + [Een aangepaste toepassing implementeren](deploy-custom-application.md)
-   + [ integreer en gebruik in  [!DNL Experience Manager]  als a  [!DNL Cloud Service] ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview)
+   + [&#x200B; integreer en gebruik in  [!DNL Experience Manager]  als a  [!DNL Cloud Service] &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview)
 + [Problemen oplossen](troubleshooting.md)
 + [Bijdragen aan het open-source-project](contribute-to-compute-service.md)

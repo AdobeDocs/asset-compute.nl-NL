@@ -11,21 +11,21 @@ ht-degree: 0%
 
 # Contribute {#contribute}
 
-[!DNL Asset Compute Service] de rekbaarheid wordt ontwikkeld onder een open ontwikkelingsmodel op [ github.com/adobe ](https://github.com/adobe). Adobe is verheugd over de bijdragen van de ontwikkelaars van extensies. Alle componenten relevant voor het ontwikkelen, bouwen, en het testen van douanetoepassingen zijn open bron. Enkele manieren waarop u kunt bijdragen zijn:
+[!DNL Asset Compute Service] de rekbaarheid wordt ontwikkeld onder een open ontwikkelingsmodel op [&#x200B; github.com/adobe &#x200B;](https://github.com/adobe). Adobe is verheugd over de bijdragen van de ontwikkelaars van extensies. Alle componenten relevant voor het ontwikkelen, bouwen, en het testen van douanetoepassingen zijn open bron. Enkele manieren waarop u kunt bijdragen zijn:
 
-* Delen koppelt terug: Creeer een GitHub kwestie in de aangewezen bewaarplaats, om insecten in product of documentatie te melden, om verhogingen te verzoeken, en om nieuwe eigenschappen te verzoeken. Weet u niet zeker welke opslagplaats moet worden gebruikt om uw uitgave te verzenden? Als zo, logboek een kwestie in de [ bewaarplaats van Asset Compute SDK ](https://github.com/adobe/asset-compute-sdk) zodat het geschikt wordt verpletterd.
+* Delen koppelt terug: Creeer een GitHub kwestie in de aangewezen bewaarplaats, om insecten in product of documentatie te melden, om verhogingen te verzoeken, en om nieuwe eigenschappen te verzoeken. Weet u niet zeker welke opslagplaats moet worden gebruikt om uw uitgave te verzenden? Als zo, logboek een kwestie in de [&#x200B; bewaarplaats van Asset Compute SDK &#x200B;](https://github.com/adobe/asset-compute-sdk) zodat het geschikt wordt verpletterd.
 
 * Patch: als u een patch wilt leveren, gebruikt u de bestaande opslagplaats en dient u een pull-aanvraag in.
 
-Voor gedetailleerde richtsnoeren, zie de [ bijdragerichtlijnen ](https://github.com/adobe/asset-compute-sdk/blob/master/.github/CONTRIBUTING.md).
+Voor gedetailleerde richtsnoeren, zie de [&#x200B; bijdragerichtlijnen &#x200B;](https://github.com/adobe/asset-compute-sdk/blob/master/.github/CONTRIBUTING.md).
 
 ## Beschikbare bronnen en bibliotheken {#available-resources}
 
-Zie deze lijst van [ open-sourced bibliotheken ](https://github.com/adobe/asset-compute-sdk#available-resources-and-libraries) voor [!DNL Asset Compute Service]. Daarnaast zijn de beschikbare bronnen voor [!DNL Adobe I/O] Runtime en OpenWhisk:
+Zie deze lijst van [&#x200B; open-sourced bibliotheken &#x200B;](https://github.com/adobe/asset-compute-sdk#available-resources-and-libraries) voor [!DNL Asset Compute Service]. Daarnaast zijn de beschikbare bronnen voor [!DNL Adobe I/O] Runtime en OpenWhisk:
 
-* [ krijgen begonnen met Apache OpenWhisk ](https://github.com/apache/openwhisk/tree/master/docs#getting-started-with-openwhisk).
-* [ Laboratorium: Bouw composable AI met  [!DNL Adobe Sensei]  functies en Adobe [!DNL I/O Runtime] ](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
-* Adobe [[!DNL I/O Runtime]  Veelgestelde vragen ](https://developer.adobe.com/runtime/docs/support/faq/)
+* [&#x200B; krijgen begonnen met Apache OpenWhisk &#x200B;](https://github.com/apache/openwhisk/tree/master/docs#getting-started-with-openwhisk).
+* [&#x200B; Laboratorium: Bouw composable AI met  [!DNL Adobe Sensei]  functies en Adobe [!DNL I/O Runtime] &#x200B;](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
+* Adobe [[!DNL I/O Runtime]  Veelgestelde vragen &#x200B;](https://developer.adobe.com/runtime/docs/support/faq/)
 
 <!-- **TBD** for post-release:
 * Link to Adobe Developer App Builder open-source components.

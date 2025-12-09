@@ -31,7 +31,7 @@ Uitzonderingen op deze regel zijn releaseopmerkingen waarin bekende problemen ku
 
 Alle ideeën die u eventueel nodig hebt om de documentatie te verbeteren, zijn welkom als bijdragen. Nochtans, zijn de commentaren, de kwesties, en trekkingsverzoeken voorgenomen voor *bijdragen* slechts. Zij moeten uw vragen over hoe te om het product te gebruiken, projecten uit te voeren, of technische kwesties op te lossen niet beantwoorden.
 
-Om het even welke vragen over het gebruik of de technische fouten u door het normale steunproces door het [[!DNL Experience Manager]  portaal van de Steun van de Klant &#x200B;](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) of in de [[!DNL Experience Manager]  gemeenschap &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) zou kunnen moeten worden gemeld.
+Om het even welke vragen over het gebruik of de technische fouten u door het normale steunproces door het [[!DNL Experience Manager]  portaal van de Steun van de Klant &#x200B;](https://experienceleague.adobe.com/nl?support-solution=Experience+Manager#home) of in de [[!DNL Experience Manager]  gemeenschap &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) zou kunnen moeten worden gemeld.
 
 ***de bijdragen van de Documentatie zijn geen vervanging voor de Zorg van de Klant van Adobe*** en om het even welke dergelijke bijdragen die antwoorden op steun-verwante vragen zoeken worden verworpen.
 

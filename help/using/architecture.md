@@ -2,9 +2,9 @@
 title: Architectuur van  [!DNL Asset Compute Service]
 description: Hoe  [!DNL Asset Compute Service]  API, toepassingen, en SDK werken samen om de wolk-inheemse dienst van de activaverwerking te verlenen.
 exl-id: 658ee4b7-5eb1-4109-b263-1b7d705e49d6
-source-git-commit: f199cecfe4409e2370b30783f984062196dd807d
+source-git-commit: aed361a577fc53caec4118e417b1c0c814617b51
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ De [!DNL Asset Compute Service] is gebouwd op het Adobe [!DNL `I/O Runtime`] -pl
 
 [!DNL Asset Compute Service] kan worden uitgebreid door aangepaste toepassingen te maken op basis van [!DNL Adobe Developer App Builder] . Deze aangepaste toepassingen zijn apps zonder kop en voeren taken uit zoals aangepaste conversieprogramma&#39;s toevoegen of externe API&#39;s aanroepen om afbeeldingsbewerkingen uit te voeren.[!DNL Project Adobe Developer App Builder]
 
-[!DNL Project Adobe Developer App Builder] is een framework voor het ontwikkelen en implementeren van aangepaste webtoepassingen op de Adobe [!DNL `I/O Runtime`] . Voor het maken van aangepaste toepassingen kunnen ontwikkelaars [!DNL React Spectrum] (Adobe UI-toolkit) gebruiken, microservices maken, aangepaste gebeurtenissen maken en API&#39;s ordenen. Zie [&#x200B; documentatie van Adobe Developer App Builder &#x200B;](https://developer.adobe.com/app-builder/docs/intro_and_overview/#).
+[!DNL Project Adobe Developer App Builder] is een framework voor het ontwikkelen en implementeren van aangepaste webtoepassingen op de Adobe [!DNL `I/O Runtime`] . Voor het maken van aangepaste toepassingen kunnen ontwikkelaars [!DNL React Spectrum] (Adobe UI-toolkit) gebruiken, microservices maken, aangepaste gebeurtenissen maken en API&#39;s ordenen. Zie [ documentatie van Adobe Developer App Builder ](https://developer.adobe.com/app-builder/docs/intro_and_overview/#).
 
 De basis waarop de architectuur is gebaseerd, is onder meer:
 
@@ -25,7 +25,7 @@ De basis waarop de architectuur is gebaseerd, is onder meer:
 
 * Binaire cloudopslag biedt de benodigde functies voor het afzonderlijk opslaan en openen van elementbestanden en uitvoeringen, zonder dat volledige toegangsrechten voor de opslag vereist zijn, met behulp van vooraf ondertekende URL-verwijzingen. Dankzij overdrachtsversnelling, CDN-caching en colocatie van computertoepassingen met cloudopslag hebt u optimale toegang tot content met lage latentie. Zowel AWS- als Azure-wolken worden ondersteund.
 
-![&#x200B; Architectuur van de Dienst van Asset Compute &#x200B;](assets/architecture-diagram.png)
+![ Architectuur van de Dienst van Asset Compute ](assets/architecture-diagram.png)
 
 *Cijfer: Architectuur van [!DNL Asset Compute Service] en hoe het met [!DNL Experience Manager], opslag, en verwerkingstoepassing integreert.*
 
@@ -35,9 +35,10 @@ De architectuur bestaat uit de volgende onderdelen:
 
 * **Toepassingen om activa** te verwerken die in bepaalde soorten dossierformaten of doelvertoningen specialiseren. Conceptueel is een toepassing vergelijkbaar met het UNIX® pipe-concept: een invoerbestand wordt omgezet in een of meer uitvoerbestanden.
 
-* **a [&#x200B; gemeenschappelijke toepassingsbibliotheek &#x200B;](https://github.com/adobe/asset-compute-sdk)** behandelt gemeenschappelijke taken. Bijvoorbeeld het downloaden van het bronbestand, het uploaden van de uitvoeringen, het rapporteren van fouten, het verzenden van gebeurtenissen en het controleren. Dit ontwerp zorgt ervoor dat de ontwikkeling van toepassingen eenvoudig blijft, waarbij het serverloze concept wordt gebruikt en interactie beperkt blijft tot het lokale bestandssysteem.
+* **a [ gemeenschappelijke toepassingsbibliotheek ](https://github.com/adobe/asset-compute-sdk)** behandelt gemeenschappelijke taken. Bijvoorbeeld het downloaden van het bronbestand, het uploaden van de uitvoeringen, het rapporteren van fouten, het verzenden van gebeurtenissen en het controleren. Dit ontwerp zorgt ervoor dat de ontwikkeling van toepassingen eenvoudig blijft, waarbij het serverloze concept wordt gebruikt en interactie beperkt blijft tot het lokale bestandssysteem.
 
-<!-- TBD:
+<!-- 
+TBD:
 
 * About the YAML file?
 * minimize description to custom applications

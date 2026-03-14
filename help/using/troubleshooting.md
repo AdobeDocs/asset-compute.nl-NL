@@ -22,9 +22,9 @@ Enkele algemene tips voor het oplossen van problemen waarmee u problemen kunt op
 
 ## Problemen met aanmelden via Adobe [!DNL aio-cli] {#login-via-aio-cli}
 
-Als u kwesties het programma openen aan [!DNL Adobe Developer Console] [ door de Adobe  [!DNL aio-cli] ](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#3-signing-in-from-cli) hebt, dan voeg manueel de geloofsbrieven toe die voor het ontwikkelen, het testen, en het opstellen van uw douanetoepassing worden vereist:
+Als u kwesties het programma openen aan [!DNL Adobe Developer Console] [&#x200B; door de Adobe  [!DNL aio-cli] &#x200B;](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#3-signing-in-from-cli) hebt, dan voeg manueel de geloofsbrieven toe die voor het ontwikkelen, het testen, en het opstellen van uw douanetoepassing worden vereist:
 
-1. Navigeer aan uw project en werkruimte van de Bouwer van de Ontwikkelaar van Adobe van Adobe op de [ Console van de Ontwikkelaar ](https://developer.adobe.com/console/user/servicesandapis) en druk **[!UICONTROL Download]** van de hoogste juiste hoek. Open dit bestand en sla deze JSON op een veilige plaats op uw computer op.
+1. Navigeer aan uw project en werkruimte van de Bouwer van de Ontwikkelaar van Adobe van Adobe op de [&#x200B; Console van de Ontwikkelaar &#x200B;](https://developer.adobe.com/console/user/servicesandapis) en druk **[!UICONTROL Download]** van de hoogste juiste hoek. Open dit bestand en sla deze JSON op een veilige plaats op uw computer op.
 
 1. Navigeer naar het ENV-bestand in uw Adobe Developer App Builder-toepassing.
 
@@ -41,7 +41,7 @@ Als u kwesties het programma openen aan [!DNL Adobe Developer Console] [ door de
        ASSET_COMPUTE_INTEGRATION_FILE_PATH=
    ```
 
-1. Opstelling de rest van de [ vereiste geloofsbrieven ](develop-custom-application.md) nodig voor het ontwikkelaarshulpmiddel.
+1. Opstelling de rest van de [&#x200B; vereiste geloofsbrieven &#x200B;](develop-custom-application.md) nodig voor het ontwikkelaarshulpmiddel.
 
 <!-- 
 TBD for later:
